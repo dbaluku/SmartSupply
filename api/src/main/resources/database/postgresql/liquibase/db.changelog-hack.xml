@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+	<!-- fixes errors in liquibase. -->
+	<!-- e.g. a table is deleted in the db to create clean liquibase code, but 
+		a drop table changeset has been created. Changing that drop-table changeset 
+		to drop if exists requires a hack to 1st drop the row in the changelog table -->
+
+	<changeSet author="Job (Manual)" id="554CD7CF-7CD9-4c20-A005-986F05F6DF0A"
+		failOnError="true">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="users" />
+			<and>
+				<sqlCheck expectedResult="1">
+					<![CDATA[
+					SELECT count(*) FROM databasechangelog where id='1359548191960-114';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<sql>
+			delete from databasechangelog where id='1359548191960-114';
+		</sql>
+	</changeSet>
+</databaseChangeLog>
+
+    

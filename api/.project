@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+  <name>api</name>
+  <comment>College of Health Science - Information Management Sytem, was built on top of the Results management system developed by the
+        College of computing and Information Technology through DISD department. With contribution from
+        C. Tumwebaze and J. Rwebembera. The current developers to extend this code base include J.Mpango, D.Kusiima, S.Sevume and D. Baluku.
+        It a web based results processing system that is heavily reliant on Java technologies.
+        The latest version is growing to offer every AR function. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

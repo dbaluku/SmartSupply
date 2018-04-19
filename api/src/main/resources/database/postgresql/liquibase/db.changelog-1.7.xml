@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+	<!-- Insert Makerere - Main Campus -->
+	<changeSet author="dbaluku (manual)" id="4">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="url" />
+			<and>
+				<sqlCheck expectedResult="0">
+	    			<![CDATA[
+					SELECT count(*) FROM url where id='A6186845-6739-43a4-93A8-EDAD24392369';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<insert tableName="url">
+			<column name="id" value="A6186845-6739-43a4-93A8-EDAD24392369" />
+			<column name="url" value="http://localhost:8083" />
+			<column name="record_status" valueNumeric="0" />
+			<column name="user_types_str" value="1"/>
+		</insert>
+	</changeSet>
+
+	<changeSet author="dbaluku (manual)" id="5">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="url_usertype" />
+			<and>
+				<sqlCheck expectedResult="0">
+	    			<![CDATA[
+					SELECT count(*) FROM url_usertype where id='B7D26CD9-A9EF-4c6c-9ADD-ACE250527CBC';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<insert tableName="url_usertype">
+			<column name="id" value="B7D26CD9-A9EF-4c6c-9ADD-ACE250527CBC" />
+			<column name="url_id" value="A6186845-6739-43a4-93A8-EDAD24392369" />
+			<column name="user_type" value="1" />
+			<column name="record_status" valueNumeric="0" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>
+
+    
+       

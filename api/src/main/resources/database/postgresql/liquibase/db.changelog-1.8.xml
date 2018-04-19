@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+	<!--smartsupply system change logs-->
+
+	<changeSet author="CODE (generated)" id="1520575711219-2">
+		<createTable tableName="customer">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="Adress" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="customer_no" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="email" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="customer_name" type="VARCHAR(255)"/>
+			<column name="phoneNo" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-3">
+		<createTable tableName="job_title">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="description" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="lenovo (generated)" id="1523801810502-12">
+		<createTable tableName="stock">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-4">
+		<createTable tableName="order_products">
+			<column name="order_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="product_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet author="CODE (generated)" id="1520575711219-7">
+		<createTable tableName="products">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="product_name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="product_type" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="quantity_type" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="unit_price" type="FLOAT4">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet author="lenovo (generated)" id="1523801810502-4">
+		<createTable tableName="orders">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date_created" type="timestamp">
+				<constraints nullable="false"/>
+			</column>
+			<column name="total_amount" type="FLOAT8">
+				<constraints nullable="false"/>
+			</column>
+			<column name="branch_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="customer_id" type="VARCHAR(255)"/>
+			<column name="user_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="lenovo (generated)" id="1523801810502-5">
+		<createTable tableName="org_unit">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="abbreviation" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="date_created" type="timestamp"/>
+			<column name="location" type="VARCHAR(255)"/>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="org_unit_type" type="INT"/>
+			<column name="ag_head_id" type="VARCHAR(255)"/>
+			<column name="ag_head_title_id" type="VARCHAR(255)"/>
+			<column name="asst_head_id" type="VARCHAR(255)"/>
+			<column name="asst_head_title_id" type="VARCHAR(255)"/>
+			<column name="head_id" type="VARCHAR(255)"/>
+			<column name="head_title_id" type="VARCHAR(255)"/>
+			<column name="parent_id" type="VARCHAR(255)"/>
+			<column name="stock_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1340344657800-13">
+		<createTable tableName="permission">
+			<column name="id" type="varchar(255)">
+				<constraints nullable="false" primaryKey="true"
+							 primaryKeyName="permissionPK"/>
+			</column>
+			<column name="record_status" type="int4">
+				<constraints nullable="false"/>
+			</column>
+			<column name="description" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="name" type="varchar(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-8">
+		<createTable tableName="role_permissions">
+			<column name="role_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="permission_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-9">
+		<createTable tableName="role_users">
+			<column name="user_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="role_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-10">
+		<createTable tableName="smartsupply_roles">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="description" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="role_name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-11">
+		<createTable tableName="smartsupply_users">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="email_address" type="VARCHAR(255)"/>
+			<column name="first_name" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="gender" type="INT"/>
+			<column name="last_name" type="VARCHAR(255)"/>
+			<column name="password" type="VARCHAR(255)"/>
+			<column name="profile_pic" type="VARCHAR(255)"/>
+			<column name="salt" type="VARCHAR(255)"/>
+			<column name="user_type" type="INT"/>
+			<column name="username" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="org_unit_id" type="VARCHAR(255)"/>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-12">
+		<createTable tableName="url">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="url" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="user_types_str" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-13">
+		<createTable tableName="url_usertype">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="user_type" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="url_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-14">
+		<createTable tableName="user_jobtitles">
+			<column name="user_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="jobtitle_id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-15">
+		<addPrimaryKey columnNames="user_id, role_id" tableName="role_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-17">
+		<addPrimaryKey columnNames="id" constraintName="customerPK" tableName="customer"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-18">
+		<addPrimaryKey columnNames="id" constraintName="job_titlePK" tableName="job_title"/>
+	</changeSet>
+	<changeSet author="lenovo (generated)" id="1523801810502-20">
+		<addPrimaryKey columnNames="id" constraintName="ordersPK" tableName="orders"/>
+	</changeSet>
+	<changeSet author="lenovo (generated)" id="1523801810502-21">
+		<addPrimaryKey columnNames="id" constraintName="org_unitPK" tableName="org_unit"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-21">
+		<addPrimaryKey columnNames="id" constraintName="productsPK" tableName="products"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-22">
+		<addPrimaryKey columnNames="id" constraintName="smartsupply_rolesPK" tableName="smartsupply_roles"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-23">
+		<addPrimaryKey columnNames="id" constraintName="smartsupply_usersPK" tableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-24">
+		<addPrimaryKey columnNames="id" constraintName="urlPK" tableName="url"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-25">
+		<addPrimaryKey columnNames="id" constraintName="url_usertypePK" tableName="url_usertype"/>
+	</changeSet>
+
+	<changeSet author="CODE (generated)" id="1520575711219-27">
+		<addUniqueConstraint columnNames="product_name" constraintName="UC_PRODUCTSPRODUCT_NAME_COL" tableName="products"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-28">
+		<addUniqueConstraint columnNames="first_name" constraintName="UC_SMARTSUPPLY_USERSFIRST_NAME_COL" tableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-29">
+		<addUniqueConstraint columnNames="username" constraintName="UC_SMARTSUPPLY_USERSUSERNAME_COL" tableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-30">
+		<addForeignKeyConstraint baseColumnNames="parent_id" baseTableName="org_unit" constraintName="FK_3lwwtevjdt7ojcegyvwmp06cd" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="org_unit"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-31">
+		<addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_jobtitles" constraintName="FK_5ilbiytt6ro3cjq3cg3lcjuiu" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-32">
+		<addForeignKeyConstraint baseColumnNames="url_id" baseTableName="url_usertype" constraintName="FK_759hodbrwjbt8rawfe7yxpuvx" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="url"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-33">
+		<addForeignKeyConstraint baseColumnNames="asst_head_id" baseTableName="org_unit" constraintName="FK_7axtkapqc78249qkg2in3mdy8" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-34">
+		<addForeignKeyConstraint baseColumnNames="ag_head_title_id" baseTableName="org_unit" constraintName="FK_8vhl4uhiriu5yp4049pagvy9h" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="job_title"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-35">
+		<addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="orders" constraintName="FK_astys1dv61mdlp0n0wx0574r2" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-36">
+		<addForeignKeyConstraint baseColumnNames="role_id" baseTableName="role_permissions" constraintName="FK_d4atqq8ege1sij0316vh2mxfu" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_roles"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-37">
+		<addForeignKeyConstraint baseColumnNames="asst_head_title_id" baseTableName="org_unit" constraintName="FK_fpcfxcyi7o35b55k0b47s334f" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="job_title"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-38">
+		<addForeignKeyConstraint baseColumnNames="head_title_id" baseTableName="org_unit" constraintName="FK_ia5a0nr5jtd99mk5gug39fmv6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="job_title"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-39">
+		<addForeignKeyConstraint baseColumnNames="product_id" baseTableName="order_products" constraintName="FK_kcqj8vki330hducl9i221jq1d" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="products"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-40">
+		<addForeignKeyConstraint baseColumnNames="user_id" baseTableName="role_users" constraintName="FK_mlk69moki6vuqsa4uxqpj54x2" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-41">
+		<addForeignKeyConstraint baseColumnNames="org_unit_id" baseTableName="smartsupply_users" constraintName="FK_nbf0klholqm3c3t4ue6u4spjo" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="org_unit"/>
+	</changeSet>
+
+	<changeSet author="CODE (generated)" id="1520575711219-43">
+		<addForeignKeyConstraint baseColumnNames="head_id" baseTableName="org_unit" constraintName="FK_oskblgit85dg6db5jxhi97pnx" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-44">
+		<addForeignKeyConstraint baseColumnNames="ag_head_id" baseTableName="org_unit" constraintName="FK_ovyf679tbuiyq4jdcqotqxva6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-45">
+		<addForeignKeyConstraint baseColumnNames="permission_id" baseTableName="role_permissions" constraintName="FK_persssss" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="permission"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-46">
+		<addForeignKeyConstraint baseColumnNames="order_id" baseTableName="order_products" constraintName="FK_qp7dw8lwfecrr8i3rktqv86f2" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="orders"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-47">
+		<addForeignKeyConstraint baseColumnNames="jobtitle_id" baseTableName="user_jobtitles" constraintName="FK_rwvje25l5xex4do5f40nxtt7p" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="job_title"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520575711219-48">
+		<addForeignKeyConstraint baseColumnNames="role_id" baseTableName="role_users" constraintName="FK_sw7bxjnck8kj55yij22ar1705" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_roles"/>
+	</changeSet>
+
+
+	<changeSet author="CODE (generated)" id="1520888646720-14">
+		<createTable tableName="stock_products">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+			<column name="quantity" type="FLOAT8"/>
+			<column name="product_id" type="VARCHAR(255)"/>
+			<column name="stock_id" type="VARCHAR(255)"/>
+		</createTable>
+	</changeSet>
+
+
+	<changeSet author="lenovo (generated)" id="1523801810502-26">
+		<addPrimaryKey columnNames="id" constraintName="stockPK" tableName="stock"/>
+	</changeSet>
+
+	<changeSet author="lenovo (generated)" id="1523801810502-34">
+		<addUniqueConstraint columnNames="name" constraintName="UC_STOCKNAME_COL" tableName="stock"/>
+	</changeSet>
+
+	<changeSet author="CODE (generated)" id="1520888646720-44">
+		<addForeignKeyConstraint baseColumnNames="product_id" baseTableName="stock_products" constraintName="FK_eelcufj0t6qbeipm6sasl8mkc" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="products"/>
+	</changeSet>
+	<changeSet author="CODE (generated)" id="1520888646720-45">
+		<addForeignKeyConstraint baseColumnNames="stock_id" baseTableName="stock_products" constraintName="FK_evqeeh2b4ih2w348df19gjo9j" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="stock"/>
+	</changeSet>
+
+	<changeSet author="lenovo (generated)" id="1523801810502-51">
+		<addForeignKeyConstraint baseColumnNames="stock_id" baseTableName="org_unit" constraintName="FK_mr950db9vcc16xts0ky01e74s" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="stock"/>
+	</changeSet>
+
+	<changeSet author="lenovo (generated)" id="1523801810502-47">
+		<addForeignKeyConstraint baseColumnNames="user_id" baseTableName="orders" constraintName="FK_k8kupdtcdpqd57b6j4yq9uvdj" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="smartsupply_users"/>
+	</changeSet>
+	<changeSet author="lenovo (generated)" id="1523801810502-40">
+		<addForeignKeyConstraint baseColumnNames="branch_id" baseTableName="orders" constraintName="FK_9aol79jnu4o47e5ky2jgk0kch" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="org_unit"/>
+	</changeSet>
+
+
+</databaseChangeLog>
+
+    
+       

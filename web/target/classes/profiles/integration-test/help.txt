@@ -1,0 +1,12 @@
+# to run integration tests, you will need the following
+# firefox version 39.0
+# create a database in postgres called "bootstrapdb"
+# create a postgres user called "rms_test_user" with password "pass" and this user should have superuser rights.
+
+
+# create a file named "config.properties" in this directory
+# put the following content in that file
+
+hibernate.connection.username=postgres
+hibernate.connection.password=jona2010
+hibernate.connection.url=jdbc\:postgresql\://localhost\:5432/rms_test_db

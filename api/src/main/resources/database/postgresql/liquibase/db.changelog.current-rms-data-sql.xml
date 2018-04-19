@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+	<changeSet author="job" id="B7BE9432-59E5-4fc1-AB81-D1D239DCAA4A">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="department" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-departments.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="13A5F995-22FF-486f-8F91-D4DFCA62E117">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="course" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-courses.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="F2248DF0-B5AB-487e-BE04-FA791CAA8CE0">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="course_option" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-courseoptions.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="40BDB985-4DA5-4e85-B5CC-58A65C53D707">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="plan" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-plans.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="DC77B0A3-6140-4e48-8527-035FEDD4FBA8">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="grading_system" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-gradingsystems.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="583188A2-18F8-4003-B58C-646D06E465E9">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="intake" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-intakes.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="A5189751-0927-4cc9-B82E-707F960B9CB7">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="course_intake" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-courseintakes.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="D1E67A27-09A4-4c4a-8713-465E5FC28D35">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="course_unit" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-courseunits.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="DA9516CE-09C9-43ec-9854-E877D48C6AD6">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="semester_name" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-semesternames.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="FBC6F23C-B918-41c4-8176-0E0723514772">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="year_name" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-yearnames.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="DE987B74-A83E-4a79-90F8-D147A766CA79">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="curriculum" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-curriculum.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="BF90893F-CE71-4ecc-9646-30C434F39DE2">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="year_of_study" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-yearofstudy.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="F9A971F7-AD86-4998-B6F1-6DBFC0E86954">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="semester" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-semesters.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="6D625B25-915E-43e1-89D8-884B1A4CF50E">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="semester_course_unit" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-semestercourseunits.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{F70FC7DC-F7FB-4993-8719-BDDCCF68F299}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="plan_intake_curriculum" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-planintakecurriculum.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{29D73C5D-19E8-41a7-AA8D-9A1F223E2F3E}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="users" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-users.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{F0163B65-3AD9-46b8-8AAB-017EA650D4AF}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="student" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-students.sql"></sqlFile>
+	</changeSet>
+	
+	<changeSet author="job" id="{9494C63B-FD03-4c8f-B683-A5202B07E4FE}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="student" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-students2.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{A217EA79-448D-404e-A36F-D231A123613C}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="grade" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-grades.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{3A12D918-BF12-4f4b-A5C9-B30FFD6EC094}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="special_grade" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-specialgrades.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{B5B5CFCD-5207-48ee-B71A-AE8351E69749}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="student_result" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-studentresults.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{654B8172-0B9F-4c37-8229-7A982906C81A}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="job_title" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-jobtitles.sql"></sqlFile>
+	</changeSet>
+
+	<changeSet author="job" id="{0EAB64AE-FA74-4ef0-8E8A-AB8581BCB1F7}">
+		<preConditions onError="MARK_RAN" onFail="MARK_RAN">
+			<tableExists tableName="misplaced_student_result" />
+		</preConditions>
+		<sqlFile path="database/postgresql/sql/db.insert-misplacedstudentresults.sql"></sqlFile>
+	</changeSet>
+	<!-- <changeSet author="job" id=""> <preConditions onError="MARK_RAN" onFail="MARK_RAN"> 
+		<tableExists tableName="" /> </preConditions> <sqlFile path="database/postgresql/sql/db.insert-.sql"></sqlFile> 
+		</changeSet> -->
+
+<!-- Insert into role_users (user_id, role_id) select id, '570CD691-4696-4c7a-B0AA-63F590862652' from student; -->
+
+</databaseChangeLog>

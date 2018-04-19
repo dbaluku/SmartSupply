@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+
+	<!-- CHANGESETS FOR ADDING round_off_version to the student_result -->
+
+	<changeSet author="job" id="300">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<columnExists columnName="round_off_version" tableName="student_result" />
+			</not>
+		</preConditions>
+
+		<addColumn tableName="student_result">
+			<column name="round_off_version" type="int4"
+				defaultValueNumeric="1">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<!-- Adding columns for percentage contribution of course work and exam 
+		to the final mark -->
+
+	<changeSet author="Job (generated)" id="1345189308657-1">
+		<addColumn tableName="course_intake">
+			<column name="percentage_of_coursework" type="int4"
+				defaultValueNumeric="40">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet author="Job (generated)" id="1345189308657-2">
+		<addColumn tableName="course_intake">
+			<column name="percentage_of_exam" type="int4"
+				defaultValueNumeric="60">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<!-- CHANGESETS TO ADD type_concept column to the course table and delete 
+		the integer column type from the same table, default value for type_concept
+		is Bachelors - 62C2AF72-0675-44b7-AD3E-63B0BBC2E187 -->
+
+	<changeSet author="Job (generated)" id="1345497901891-1">
+		<addColumn tableName="course">
+			<column name="type_concept" type="varchar(255)"
+				defaultValue="62C2AF72-0675-44b7-AD3E-63B0BBC2E187">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet author="Job (generated)" id="1345497901891-15">
+		<addForeignKeyConstraint baseColumnNames="type_concept"
+			baseTableName="course" constraintName="FKAF42E01B4216FA4E"
+			deferrable="false" initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="concepts" />
+	</changeSet>
+	<changeSet author="Job (generated)" id="1345497901891-91">
+		<dropColumn columnName="type" schemaName="public"
+			tableName="course" />
+	</changeSet>
+
+	<changeSet author="MARKPHILIP (generated)" id="1346412279843-1">
+		<addColumn tableName="student">
+			<column name="student_phone" type="varchar(255)" />
+		</addColumn>
+	</changeSet>
+	
+		<!-- CHANGESETS TO ADD tables dead_year and stay_put -->
+		
+	<changeSet author="Job (generated)" id="1347039340721-1">
+        <createTable tableName="dead_year">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="dead_yearPK"/>
+            </column>
+            <column name="record_status" type="int4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="start_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="student_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Job (generated)" id="1347039340721-22">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="dead_year" constraintName="FKA1E663385AE4AD5D" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="student"/>
+    </changeSet>
+    <changeSet author="Job (generated)" id="1347039340721-2">
+        <createTable tableName="stay_put">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="stay_putPK"/>
+            </column>
+            <column name="record_status" type="int4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="notes" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="start_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="student_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Job (generated)" id="1347039340721-53">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="stay_put" constraintName="FK4ED614295AE4AD5D" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="student"/>
+    </changeSet>
+
+	<!-- CHANGES TO Misplaced_student_result -->
+	<changeSet author="Job (generated)" id="1346907584369-1">
+		<addColumn tableName="misplaced_student_result">
+			<column name="misplacement_type" type="int4" />
+		</addColumn>
+	</changeSet>
+	<changeSet author="Job (generated)" id="1346907584369-2">
+		<addColumn tableName="misplaced_student_result">
+			<column name="suggested_student_id" type="varchar(255)" />
+		</addColumn>
+	</changeSet>
+	<changeSet author="Job (generated)" id="1346907584369-33">
+		<addForeignKeyConstraint baseColumnNames="suggested_student_id"
+			baseTableName="misplaced_student_result" constraintName="FK6859E4EC31213F9"
+			deferrable="false" initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="student" />
+	</changeSet>
+
+	<!-- add unique key constraint to Misplaced_student_result (eg_no,intake_id,course_intake_id,course_unit_id) -->
+	<changeSet author="job" id="1.4-1">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<indexExists indexName="uk_reg_no_intake_id_course_intake_id_course_unit_id" />
+			</not>
+		</preConditions>
+		<addUniqueConstraint tableName="misplaced_student_result"
+			columnNames="reg_no,intake_id,course_intake_id,course_unit_id"
+			constraintName="uk_reg_no_intake_id_course_intake_id_course_unit_id" />
+	</changeSet>
+
+<!-- CHANGESETS FOR ADDING academic_backgground and guardian tables -->
+ <changeSet author="MARKPHILIP (generated)" id="1348036331738-1">
+        <createTable tableName="academic_background">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="academic_backPK"/>
+            </column>
+            <column name="record_status" type="int4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="certificate_award" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="institution_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="student_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1347622387991-2">
+        <createTable tableName="guardian">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="guardianPK"/>
+            </column>
+            <column name="record_status" type="int4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="occupation" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="relationship" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="student_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1347622387991-28">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="guardian" constraintName="FKA4CDB9915AE4AD5D" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="student"/>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1348036331738-6">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="academic_background" constraintName="FKFD3853665AE4AD5D" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="student"/>
+    </changeSet>
+
+
+<!-- CHANGESETS FOR ADDING bio_info to the student -->
+<changeSet author="MARKPHILIP (generated)" id="1347608917123-1">
+        <addColumn tableName="student">
+            <column name="address" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+<changeSet author="MARKPHILIP (generated)" id="1347576389824-1">
+        <addColumn tableName="student">
+            <column name="age" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1347576389824-2">
+        <addColumn tableName="student">
+            <column name="birth_date" type="datetime"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1347576389824-3">
+        <addColumn tableName="student">
+            <column name="email_address" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1347576389824-4">
+        <addColumn tableName="student">
+            <column name="nationality" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1347576389824-5">
+        <addColumn tableName="student">
+            <column name="occupation" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    
+    <!-- CHANGESETS FOR ADDING time_of_study to the student -->
+    <changeSet author="MARKPHILIP (generated)" id="1348133415084-1">
+        <addColumn tableName="student">
+            <column name="time_of_study" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1348133415084-61">
+        <addForeignKeyConstraint baseColumnNames="time_of_study" baseTableName="student" constraintName="FK8FFE823BF1F5A7E" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="concepts"/>
+    </changeSet>
+    
+    <!-- CHANGESETS FOR ADDING payment to the student -->
+    <changeSet author="MARKPHILIP (generated)" id="1348213195196-1">
+        <createTable tableName="payment">
+            <column name="id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="paymentPK"/>
+            </column>
+            <column name="record_status" type="int4">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="float8(19)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="receipt_no" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="student_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="MARKPHILIP (generated)" id="1348213195196-34">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="payment" constraintName="FKD11C32065AE4AD5D" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="student"/>
+    </changeSet>
+    
+     <changeSet author="MARKPHILIP (generated)" id="1348479108345-1">
+        <addColumn tableName="student">
+            <column name="application_date" type="datetime"/>
+        </addColumn>
+    </changeSet>
+    
+    
+    <!-- CHANGES TO misplaced_student_result table -->
+    <changeSet author="Job (generated)" id="1348525997346-1">
+        <addColumn tableName="misplaced_student_result">
+            <column name="action_taken" type="int4" defaultValueNumeric="0"/>
+        </addColumn>
+    </changeSet>   
+    <changeSet author="Job (generated)" id="1348525997346-99">
+        <dropColumn columnName="is_resolved" schemaName="public" tableName="misplaced_student_result"/>
+    </changeSet>
+    <changeSet author="Job (generated)" id="1348525997346-100">
+        <dropColumn columnName="sitting" schemaName="public" tableName="misplaced_student_result"/>
+    </changeSet>
+    
+</databaseChangeLog>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+
+	<!-- CHANGESETS FOR ADDING COURSE-UNIT CHNANGES -->
+	<changeSet author="Job (generated)" id="1351575567613-1">
+		<addColumn tableName="curriculum">
+			<column name="type" type="int4" defaultValueNumeric="2">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet author="Job (generated)" id="1351575567613-2">
+		<addNotNullConstraint columnDataType="varchar(255)"
+			columnName="code" defaultNullValue="" schemaName="public" tableName="course_unit" />
+	</changeSet>
+	<changeSet author="Job (generated)" id="1351575567613-3">
+		<addNotNullConstraint columnDataType="varchar(255)"
+			columnName="name" defaultNullValue="" schemaName="public" tableName="course_unit" />
+	</changeSet>
+	<changeSet author="Job (generated)" id="1351575567613-4">
+		<addNotNullConstraint columnDataType="int4"
+			columnName="type" defaultNullValue="0" schemaName="public" tableName="course_unit" />
+	</changeSet>
+
+	<!-- SCHOOL -->
+	<changeSet author="Job (generated)" id="1351622432445-1">
+		<createTable tableName="school">
+			<column name="id" type="varchar(255)">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="schoolPK" />
+			</column>
+			<column name="record_status" type="int4">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="varchar(255)">
+				<constraints nullable="false" unique="true" />
+			</column>
+			<column name="abbreviation" type="varchar(255)">
+				<constraints nullable="false" unique="true" />
+			</column>
+			<column name="dean_id" type="varchar(255)" />
+		</createTable>
+	</changeSet>
+
+	<changeSet author="Job (generated)" id="1351622432445-49">
+		<addForeignKeyConstraint baseColumnNames="dean_id"
+			baseTableName="school" constraintName="FKC9E15B74F9775FB4"
+			deferrable="false" initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="users" />
+	</changeSet>
+
+	<!-- INSERT COCIS -->
+	<changeSet author="Job" id="{0F3332C5-DFE5-41b9-8B28-94D07E2E95F3}"
+		failOnError="true">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="school" />
+			<and>
+				<sqlCheck expectedResult="0">
+					<![CDATA[
+					SELECT count(*) FROM school where id='D5C8C8ED-68D8-453e-941E-05D5BAFB14E5';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<insert tableName="school">
+			<column name="id" value="D5C8C8ED-68D8-453e-941E-05D5BAFB14E5" />
+			<column name="name" value="School of Computing and Informatics Technology" />
+			<column name="abbreviation" value="SCIT" />
+			<column name="record_status" valueNumeric="0" />
+		</insert>
+	</changeSet>
+
+
+
+	<changeSet author="Job (generated)" id="1351622432445-2">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="school" />
+			<and>
+				<sqlCheck expectedResult="1">
+					<![CDATA[
+					SELECT count(*) FROM school where id='D5C8C8ED-68D8-453e-941E-05D5BAFB14E5';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<addColumn tableName="department">
+			<column name="school_id" type="varchar(255)"
+				defaultValue="D5C8C8ED-68D8-453e-941E-05D5BAFB14E5" />
+		</addColumn>
+	</changeSet>
+
+	<changeSet author="Job (generated)" id="1351622432445-27">
+		<addForeignKeyConstraint baseColumnNames="school_id"
+			baseTableName="department" constraintName="FK328E4352C9F7E757"
+			deferrable="false" initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="school" />
+	</changeSet>
+
+	<!-- Add Duration In to course to indicate the time-Unit i.e years, Months, weeks... -->
+	<changeSet author="Job (generated)" id="1351649013825-1">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="concepts" />
+			<and>
+				<sqlCheck expectedResult="1">
+					<![CDATA[
+					SELECT count(*) FROM concepts where id='9435B17C-26C9-4bd3-B601-013EDBD427BA';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<addColumn tableName="course">
+			<column name="duration_in" type="varchar(255)" defaultValue="9435B17C-26C9-4bd3-B601-013EDBD427BA">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<changeSet author="Job (generated)" id="1351649013825-1-2">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<not>
+				<columnExists columnName="duration_in" tableName="course" />
+			</not>
+		</preConditions>
+		<addColumn tableName="course">
+			<column name="duration_in" type="varchar(255)" defaultValue="9435B17C-26C9-4bd3-B601-013EDBD427BA">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<changeSet author="Job (generated)" id="1351649013825-19">
+		<addForeignKeyConstraint baseColumnNames="duration_in"
+			baseTableName="course" constraintName="FKAF42E01B24A06F9B"
+			deferrable="false" initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="concepts" />
+	</changeSet>
+
+	<changeSet author="Job" id="549A8CDC-872E-4cd7-B112-F9EA62BE18EE">
+		<addUniqueConstraint constraintName="concept_name_unique_key"
+			columnNames="concept_name" tableName="concepts" />
+	</changeSet>
+	
+	<changeSet author="Job" id="{D5052A0D-149C-4e6e-BB22-1051A444C6BA}">
+		<addUniqueConstraint constraintName="course_intake_unique_course_id_intake_id_key"
+			columnNames="course_id, intake_id" tableName="course_intake" />
+	</changeSet>
+
+</databaseChangeLog>

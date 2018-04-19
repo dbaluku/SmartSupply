@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+		<!-- PROPERTY PLACEHOLDER CONFIGURER -->
+	<bean name="settings" class="org.smartsupply.api.utils.RmsPropertyPlaceHolderConfigurer">
+		<property name="environmentVariable" value="RMS_SETTINGS" />
+		<property name="classPathPropertiesFilename" value="RMS_SETTINGS.properties" />
+	</bean>
+
+	<import resource="classpath:applicationContext-security.xml" />
+	<import resource="classpath:applicationContext-Server.xml" />
+
+</beans>

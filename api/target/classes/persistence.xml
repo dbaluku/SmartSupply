@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+			 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+     http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="org.rms.entities" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!--<mapping-file>META-INF/orm.xml</mapping-file>-->
+
+		<class>org.smartsupply.model.admin.JobTitle</class>
+		<class>org.smartsupply.model.admin.Branch</class>
+		<class>org.smartsupply.model.admin.Permission</class>
+		<class>org.smartsupply.model.admin.Role</class>
+
+		<class>org.smartsupply.model.admin.Url</class>
+		<class>org.smartsupply.model.admin.UrlUserType</class>
+		<class>org.smartsupply.model.admin.User</class>
+		<class>org.smartsupply.model.customer.Customer</class>
+		<class>org.smartsupply.model.order.Order</class>
+		<class>org.smartsupply.model.product.Product</class>
+		<class>org.smartsupply.model.product.Stock</class>
+		<class>org.smartsupply.model.product.StockProduct</class>
+
+
+		<exclude-unlisted-classes />
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
+			<!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
+			<!--<property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>-->
+			<!--<property name="hibernate.connection.charSet" value="UTF-8"/>-->
+			<!--<property name="hibernate.show_sql" value="false"/>-->
+		</properties>
+
+	</persistence-unit>
+</persistence>

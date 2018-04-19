@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+
+	<changeSet author="kirwana" id="107BEED4-A04A-4DD2-B0AD-E315B795978E"
+		failOnError="true">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="smartsupply_users" />
+			<and>
+				<sqlCheck expectedResult="0">
+					<![CDATA[
+					SELECT count(*) FROM smartsupply_users where id='107BEED4-A04A-4DD2-B0AD-E315B795978E';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<insert tableName="smartsupply_users">
+			<column name="id" value="107BEED4-A04A-4DD2-B0AD-E315B795978E" />
+			<column name="first_name" value="default administrator" />
+			<column name="username" value="administrator" />
+			<column name="password" value="7357bec928a1af86415f7b8c11245296ec1779d" />
+			<column name="salt" value="e2597cf74095403889c6b07b46d8af5d94b8e6" />
+			<!--<column name="user_status" valueNumeric="1" />-->
+			<column name="record_status" valueNumeric="0" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="kirwana" id="1379EDD1-C123-424A-BD75-DF08714580B5">
+	<preConditions onFail="MARK_RAN" onError="HALT">
+		<tableExists tableName="smartsupply_roles" />
+		<and>
+			<sqlCheck expectedResult="0">
+				<![CDATA[
+					SELECT count(*) FROM smartsupply_roles where id='1379EDD1-C123-424A-BD75-DF08714580B5';
+					]]>
+			</sqlCheck>
+		</and>
+	</preConditions>
+	<insert tableName="smartsupply_roles">
+		<column name="id" value="1379EDD1-C123-424A-BD75-DF08714580B5" />
+		<column name="role_name" value="ROLE_ADMINISTRATOR" />
+		<column name="description" value="Default Administrator Role"></column>
+		<column name="record_status" valueNumeric="0" />
+	</insert>
+</changeSet>
+
+	<changeSet author="kirwana" id="1669C1A8-A00D-45D1-9429-BCFBF1AC9464">
+		<preConditions onFail="HALT">
+			<tableExists tableName="smartsupply_users" />
+			<and>
+				<tableExists tableName="smartsupply_roles" />
+				<and>
+					<tableExists tableName="role_users" />
+				</and>
+				<and>
+					<sqlCheck expectedResult="1">
+		    			<![CDATA[
+						SELECT count(*) FROM smartsupply_roles where id='1379EDD1-C123-424A-BD75-DF08714580B5';
+						]]>
+					</sqlCheck>
+					<and>
+						<sqlCheck expectedResult="1">
+		    			<![CDATA[
+						SELECT count(*) FROM smartsupply_users where id='107BEED4-A04A-4DD2-B0AD-E315B795978E';
+						]]>
+						</sqlCheck>
+					</and>
+				</and>
+			</and>
+		</preConditions>
+		<insert tableName="role_users">
+			<column name="role_id" value="1379EDD1-C123-424A-BD75-DF08714580B5" />
+			<column name="user_id" value="107BEED4-A04A-4DD2-B0AD-E315B795978E" />
+		</insert>
+	</changeSet>
+
+	<changeSet author="job" id="1" runAlways="true">
+		<customChange class="org.smartsupply.api.database.PermissionLiquibaseChange" />
+	</changeSet>
+
+	<changeSet author="kirwana" id="107BEED4-A04A-4DD2-B0AD-E315B795979F"
+			   failOnError="true">
+		<preConditions onFail="MARK_RAN" onError="HALT">
+			<tableExists tableName="smartsupply_users" />
+			<and>
+				<sqlCheck expectedResult="0">
+					<![CDATA[
+					SELECT count(*) FROM smartsupply_users where id='4028812f616584e4016165a2abae0000';
+					]]>
+				</sqlCheck>
+			</and>
+		</preConditions>
+		<insert tableName="smartsupply_users">
+			<column name="id" value="4028812f616584e4016165a2abae0000" />
+			<column name="first_name" value="baluku derrick" />
+			<column name="username" value="dbaluku" />
+			<column name="password" value="53ab0c5c3e872a3494d8b9d1661a60526873cecf" />
+			<column name="salt" value="89bd5522-4909-4d8c-b3f4-bb47b881a6d1" />
+			<column name="user_type" value="1"/>
+			<!--<column name="user_status" valueNumeric="1" />-->
+			<column name="record_status" valueNumeric="0" />
+		</insert>
+	</changeSet>
+
+
+
+</databaseChangeLog>

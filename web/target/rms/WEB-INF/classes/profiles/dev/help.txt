@@ -1,0 +1,5 @@
+# create a file named "config.properties" in this directory
+# put the following content in that file
+hibernate.connection.username=<your-db-username>
+hibernate.connection.password=<your-hashed-password>
+hibernate.connection.url=<your-db-url>
