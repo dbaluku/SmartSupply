@@ -34,6 +34,7 @@
 		<mapping class="org.smartsupply.model.product.Product" />
 		<mapping class="org.smartsupply.model.product.Stock" />
 		<mapping class="org.smartsupply.model.product.StockProduct"/>
+		<mapping class="org.smartsupply.model.order.OrderItem"/>
 
 
 

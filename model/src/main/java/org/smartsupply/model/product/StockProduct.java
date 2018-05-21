@@ -40,7 +40,7 @@ public class StockProduct extends BaseData implements Serializable {
         this.quantity = quantity;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.MERGE})
     @JoinColumn(name = "stock_id")
     public Stock getStock() {
         return stock;
@@ -50,7 +50,7 @@ public class StockProduct extends BaseData implements Serializable {
         this.stock = stock;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.MERGE})
     @JoinColumn(name = "product_id")
     public Product getProduct() {
         return product;

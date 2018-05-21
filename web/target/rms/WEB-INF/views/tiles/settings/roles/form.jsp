@@ -49,46 +49,11 @@ form#role input[type="text"] {
 			</div>
 
 			<div>
-				<div class="box">
-					<h3>Courses</h3>
-					<div style="border-bottom: 1px solid #BBB;">
-                        <input type="checkbox" name="selectAll" id="selectAllCheckBoxes" container-id="courseList"/>
-                        <b>Select All &emsp;&emsp; Search</b>
-                        <input id="txtFilterCheckBoxes" id-sub-string="courses" type="text"placeHolder="search courses"
-                        class="uiTextbox long">
-                    </div>
-					<p id="courseList">
-						<form:checkboxes items="${courses }" path="courses" itemValue="id" itemLabel="code" />
-					</p>
-				</div>
+
 			</div>
 
 			<div>
-				<div class="box">
-					Course:
-                    <form:select id="courseDropDown" cssClass="uiDropdown" path="course">
-                        <form:options itemValue="id" items="${courses}" itemLabel="name" />
-                    </form:select>
-					<a id="lnkLoadIntakes" class="uiButton"
-						href="
-					<c:choose>
-						<c:when test="${not empty role.id }">
-							<c:out value="${baseUrl }/roles/addcourseintakes/${role.id}/${role.course.id}"></c:out>
-						</c:when>
-						<c:otherwise>
-							<c:out value="${baseUrl }/roles/addcourseintakes/"></c:out>
-						</c:otherwise>
-					</c:choose>
-					"
-						title="Click to load intakes of a selected course"
-					>Load Intakes</a>
 
-					<h3>Course Intakes</h3>
-
-					<p id="courseIntakeList">
-						<form:checkboxes items="${courseIntakes }" path="courseIntakes" itemValue="id" itemLabel="courseCodeIntakeName" />
-					</p>
-				</div>
 			</div>
 			<div style="clear: both"></div>
 			<div>
@@ -111,3 +76,5 @@ form#role input[type="text"] {
 
 	</form:form>
 </div>
+
+<script src="${baseUrl}/static/js/rms-admin.js"></script>

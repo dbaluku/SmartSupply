@@ -21,6 +21,7 @@
 		<class>org.smartsupply.model.product.Product</class>
 		<class>org.smartsupply.model.product.Stock</class>
 		<class>org.smartsupply.model.product.StockProduct</class>
+		<class>org.smartsupply.model.order.OrderItem</class>
 
 
 		<exclude-unlisted-classes />

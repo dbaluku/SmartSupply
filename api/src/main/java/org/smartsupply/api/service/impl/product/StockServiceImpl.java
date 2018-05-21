@@ -31,7 +31,6 @@ import java.util.Set;
 import static org.smartsupply.api.utils.MyValidate.disallowNull;
 
 @Service("stockService")
-@Transactional
 public class StockServiceImpl extends BaseQuickServiceImpl<Stock, StockSearchParams>
         implements BaseQuickService<Stock, StockSearchParams> {
 
@@ -104,18 +103,18 @@ public class StockServiceImpl extends BaseQuickServiceImpl<Stock, StockSearchPar
 //            }
 //        }
 
-        fillInStockProducts(stocks,params);
-        return stocks;
+
+        return fillInStockProducts(stocks,params);
     }
 
-    private void fillInStockProducts(List<Stock> stocks, StockSearchParams params) throws Exception {
+    private List<Stock> fillInStockProducts(List<Stock> stocks, StockSearchParams params) throws Exception {
         StockProductSearchParams stockProductSearchParams = new StockProductSearchParams();
        for (Stock stock:stocks){
-           List<StockProduct> stockProducts = stockProductService.get(new StockProductSearchParams(stock,params.getProduct()));
+           List<StockProduct> stockProducts = stockProductService.get(new StockProductSearchParams(stock));
            stock.setProducts(stockProducts);
        }
 
-
+        return stocks;
     }
 
 }

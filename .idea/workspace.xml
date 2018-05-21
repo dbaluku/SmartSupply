@@ -1,7 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba835c6b-9b9d-44a1-bbdb-e35800f91b7d" name="Default" comment="" />
+    <list default="true" id="ba835c6b-9b9d-44a1-bbdb-e35800f91b7d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/order/OrderItemServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/imported/OrderImport.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/order/OrderForm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/order/OrderItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/search/OrderItemSearchParams.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/customer/CustomerController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/order/OrderController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/propertyeditors/OrderItemPropertyEditor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/propertyeditors/OrderPropertyEditor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/customer/CustomerController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/order/OrderController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/propertyeditors/OrderItemPropertyEditor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/propertyeditors/OrderPropertyEditor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/customscript_jsp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/order/orderForm_jsp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/order/orderView_jsp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/order/scripts_jsp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tomcat/logs/access_log.2018-04-24" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tomcat/logs/access_log.2018-05-15" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderItemServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/imported/OrderImport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderItemSearchParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/smartsupply.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/customer/CustomerController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/order/OrderController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrderItemPropertyEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrderPropertyEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/sidebarleft.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/css.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/css.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/form.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/scripts.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/view.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customscript.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderView.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/scripts.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/static/js/dynamic_list_helper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/src/main/webapp/static/js/rms-admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/sidebarleft.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/css.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/customer/css.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/customer/form.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/customer/scripts.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/customer/view.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/customscript.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/order/orderForm.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/order/orderView.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/order/scripts.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/static/js/dynamic_list_helper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/rms/static/js/rms-admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/order/orderForm_jsp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/order/scripts_jsp.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/product/productform_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/product/productform_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/product/productview_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/product/productview_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/product/stockproduct/stockproductform_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/product/stockproduct/stockproductform_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/orgUnits/form_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/orgUnits/form_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/orgUnits/scripts_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/orgUnits/view_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/orgUnits/view_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/adduser_jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/adduser_jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/view_jsp.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/orgUnits/scripts_jsp.java" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/customscript_jsp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/view_jsp.java" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/order/orderView_jsp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/api-1.8-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/api/target/api-1.8-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/order/OrderServiceImpl.class" afterPath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/order/OrderServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/product/StockProductServiceImpl.class" afterPath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/product/StockProductServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/product/StockServiceImpl.class" afterPath="$PROJECT_DIR$/api/target/classes/org/smartsupply/api/service/impl/product/StockServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/customer/Customer.class" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/customer/Customer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/order/Order.class" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/order/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/product/StockProduct.class" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/product/StockProduct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/search/OrderSearchParams.class" afterPath="$PROJECT_DIR$/model/target/classes/org/smartsupply/model/search/OrderSearchParams.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/target/model-1.8-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/model/target/model-1.8-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/RmsBindingInitializer.class" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/RmsBindingInitializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/product/ProductController.class" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/product/ProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/product/StockProductController.class" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/product/StockProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/settings/RoleController.class" afterPath="$PROJECT_DIR$/web/target/classes/org/smartsupply/web/controllers/settings/RoleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms.war" afterPath="$PROJECT_DIR$/web/target/rms.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/RmsBindingInitializer.class" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/RmsBindingInitializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/product/ProductController.class" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/product/ProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/product/StockProductController.class" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/product/StockProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/settings/OrgUnitController.class" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/settings/OrgUnitController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/settings/RoleController.class" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/org/smartsupply/web/controllers/settings/RoleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/lib/api-1.8-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/lib/api-1.8-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/lib/model-1.8-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/lib/model-1.8-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/layout_jsp.class" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/layout_jsp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/scripts_jsp.class" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/scripts_jsp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/web_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api.iml" afterPath="$PROJECT_DIR$/api/api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockProductServiceImpl.java" afterPath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockProductServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockServiceImpl.java" afterPath="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.8.xml" afterPath="$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.8.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/api/src/main/resources/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/src/main/resources/persistence.xml" afterPath="$PROJECT_DIR$/api/src/main/resources/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/database/postgresql/liquibase/db.changelog-1.8.xml" afterPath="$PROJECT_DIR$/api/target/classes/database/postgresql/liquibase/db.changelog-1.8.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/api/target/classes/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/target/classes/persistence.xml" afterPath="$PROJECT_DIR$/api/target/classes/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/customer/Customer.java" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/customer/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/Order.java" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderSearchParams.java" afterPath="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderSearchParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/RmsBindingInitializer.java" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/RmsBindingInitializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/ProductController.java" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/ProductController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/StockProductController.java" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/StockProductController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/RoleController.java" afterPath="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/RoleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/classes/views.properties" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/classes/views.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tile-defs/tiles-defs.xml" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tile-defs/tiles-defs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/layout.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/layout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/footer.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/footer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/view.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/view.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/form.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/form.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/view.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/scripts.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/scripts.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/view.jsp" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/webapp/static/files/assets/pages/edit-table/editable.js" afterPath="$PROJECT_DIR$/web/src/main/webapp/static/files/assets/pages/edit-table/editable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/views.properties" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/classes/views.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/tile-defs/tiles-defs.xml" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/tile-defs/tiles-defs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/layout.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/layout.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/footer.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/footer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/jobtitles/view.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/jobtitles/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/orgUnits/view.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/orgUnits/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/roles/form.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/roles/form.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/roles/view.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/roles/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/user/scripts.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/user/scripts.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/user/view.jsp" afterPath="$PROJECT_DIR$/web/target/rms/WEB-INF/views/tiles/settings/user/view.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/rms/static/files/assets/pages/edit-table/editable.js" afterPath="$PROJECT_DIR$/web/target/rms/static/files/assets/pages/edit-table/editable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/layout_jsp.java" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/layout_jsp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.java" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/login_jsp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/error/error_jsp.java" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/error/error_jsp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/scripts_jsp.java" afterPath="$PROJECT_DIR$/web/target/tmp/jsp/org/apache/jsp/WEB_002dINF/views/tiles/settings/user/scripts_jsp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/web.iml" afterPath="$PROJECT_DIR$/web/web.iml" />
+    </list>
     <ignored path="$PROJECT_DIR$/web/target/" />
     <ignored path="$PROJECT_DIR$/model/target/" />
     <ignored path="$PROJECT_DIR$/api/target/" />
@@ -15,71 +168,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="OrgUnitServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/admin/OrgUnitServiceImpl.java">
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3425">
-              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderServiceImpl.java">
+      <file leaf-file-name="orderView.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+            <state relative-caret-position="1850">
+              <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="47" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserSearchParams.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/UserSearchParams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="26" column="45" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="26" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseQuickServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/base/BaseQuickServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/view.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="method#Order#2;class#Order#0" expanded="false" />
+                <element signature="method#Order#3;class#Order#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/order/OrderController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1000">
+              <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+              <folding>
+                <element signature="method#prepareModel#0;class#OrderController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockProduct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orderForm.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderForm.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22">
+              <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="571">
+              <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/scripts.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3475">
+              <caret line="139" column="78" lean-forward="false" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -91,43 +269,43 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.page-header</find>
-      <find>Welcome to Mega Able</find>
-      <find>.page-he</find>
-      <find>.page-hea</find>
-      <find>ima</find>
-      <find>image</find>
-      <find>images</find>
-      <find>Doe</find>
-      <find>icon</find>
-      <find>ti-menu</find>
-      <find>stockproduc</find>
-      <find>del</find>
-      <find>delete</find>
-      <find>save</find>
-      <find>viewProducts</find>
-      <find>view</find>
-      <find>jquer</find>
+      <find>jquery</find>
+      <find>1520888646720-14</find>
+      <find>phoneNo</find>
+      <find>style</find>
       <find>viewStockProduct</find>
-      <find>dat</find>
-      <find>date</find>
-      <find>datetime</find>
-      <find>uidatetext</find>
-      <find>datepicker</find>
+      <find>productForm</find>
+      <find>example</find>
+      <find>customer</find>
+      <find>head</find>
+      <find>insertA</find>
+      <find>resou</find>
+      <find>cus</find>
+      <find>Sidebar</find>
+      <find>nav</find>
+      <find>body</find>
+      <find>include</find>
+      <find>side</find>
+      <find>product_</find>
+      <find>view</find>
+      <find>vieworders</find>
+      <find>view(</find>
+      <find>order_</find>
       <find>orders</find>
-      <find>org_uni</find>
-      <find>stock</find>
-      <find>branch_id</find>
-      <find>buildq</find>
-      <find>orgUnitService</find>
-      <find>getSer</find>
+      <find>orderitemService</find>
+      <find>record</find>
+      <find>favicon.ico</find>
+      <find>common</find>
+      <find>saveo</find>
+      <find>add</find>
+      <find>save</find>
     </findStrings>
     <replaceStrings>
       <replace>org.smartsupply</replace>
@@ -145,10 +323,11 @@
       <dir>C:\Users\CODE\Desktop\ionic\FinalYearProject\web\src\main\webapp</dir>
       <dir>C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp</dir>
       <dir>C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\css</dir>
+      <dir>C:\Users\lenovo\Desktop\FinalYearProject</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SmartSupply" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -158,57 +337,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrgUnitPropertyEditor.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/ProductPropertyEditor.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/BranchController.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/StockController.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/StockProduct.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/StockProductPropertyEditor.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/StockPropertyEditor.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/imported/OrderImport.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderItemSearchParams.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderproductsImpl.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderSearchParams.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/view.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/view.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/view.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/view.jsp" />
+        <option value="$PROJECT_DIR$/web/pom.xml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/RoleController.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/form.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductform.jsp" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockProductServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" />
+        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/StockProductController.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/ProductController.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/static/files/assets/pages/edit-table/editable.js" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/customer/CustomerController.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/form.jsp" />
         <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/classes/views.properties" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/UserController.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/static/css/style.css" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/productform.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/form.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/urls/form.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/adduser.jsp" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/customer/Customer.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/Order.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderForm.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customscript.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/footer.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/scripts.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/css.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/scripts.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/view.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/css.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tile-defs/tiles-defs.xml" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/sidebarleft.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/layout.jsp" />
         <option value="$PROJECT_DIR$/api/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/api/src/main/resources/persistence.xml" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/RmsBindingInitializer.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductform.jsp" />
-        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/CustomerSearchParams.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderSearchParams.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/customer/Customer.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tile-defs/tiles-defs.xml" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/scripts.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/BaseQuickController.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/ProductController.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/productview.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/StockProductController.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/view.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/view.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/view.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/layout.jsp" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/static/files/assets/pages/advance-elements/css/bootstrap-datetimepicker.css" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/static/js/rms-system.js" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/form.jsp" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/Order.java" />
+        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderItem.java" />
         <option value="$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.8.xml" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/Stock.java" />
-        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/view.jsp" />
-        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/admin/JobTitle.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/admin/Branch.java" />
-        <option value="$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/StockSearchParams.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/admin/OrgUnitServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/OrgUnitController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderView.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/ProductPropertyEditor.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrderPropertyEditor.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrderItemPropertyEditor.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/RmsBindingInitializer.java" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderForm.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/scripts.jsp" />
+        <option value="$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/order/OrderController.java" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
       </list>
     </option>
   </component>
@@ -254,28 +433,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -283,6 +469,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -291,6 +478,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -300,6 +488,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -310,6 +499,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -321,6 +511,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -332,6 +523,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -343,25 +535,120 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -369,6 +656,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -377,6 +665,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -386,6 +675,29 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -396,6 +708,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -406,6 +719,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -415,6 +729,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -422,23 +737,16 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -447,6 +755,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -456,6 +765,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -465,6 +775,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -474,6 +785,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -484,6 +796,31 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tiles" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tiles" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -495,18 +832,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tiles" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-              <item name="stockproduct" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -518,18 +844,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tiles" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
-              <item name="jobtitles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -542,6 +857,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -554,6 +870,7 @@
             </path>
             <path>
               <item name="smartsupply" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -568,8 +885,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,24 +898,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\images" />
-      <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\css" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.smartsupply.model.product" />
-      <recent name="org.smartsupply.model.student" />
-      <recent name="org.smartsupply.model.admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\js" />
       <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\css" />
       <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\images" />
       <recent name="C:\Users\lenovo\Desktop\FinalYearProject\api\src\main\resources\database\postgresql\liquibase" />
       <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\WEB-INF\views\tiles\settings\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.smartsupply.model.product" />
+      <recent name="org.smartsupply.model.student" />
+      <recent name="org.smartsupply.model.admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\images" />
+      <recent name="C:\Users\lenovo\Desktop\FinalYearProject\web\src\main\webapp\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -748,43 +1067,59 @@
       <workItem from="1523795867445" duration="16067000" />
       <workItem from="1523894412680" duration="137000" />
       <workItem from="1523942967805" duration="966000" />
-      <workItem from="1524120210382" duration="929000" />
+      <workItem from="1524120210382" duration="3176000" />
+      <workItem from="1524330463485" duration="2191000" />
+      <workItem from="1524381367280" duration="1422000" />
+      <workItem from="1524467712732" duration="40358000" />
+      <workItem from="1524597876894" duration="6342000" />
+      <workItem from="1524667094488" duration="11107000" />
+      <workItem from="1524733739179" duration="23211000" />
+      <workItem from="1524807979120" duration="21473000" />
+      <workItem from="1526385930477" duration="9226000" />
+      <workItem from="1526447595751" duration="18519000" />
+      <workItem from="1526536803034" duration="14994000" />
+      <workItem from="1526629274699" duration="11855000" />
+      <workItem from="1526653326031" duration="5660000" />
+      <workItem from="1526674560697" duration="2125000" />
+      <workItem from="1526807686003" duration="12501000" />
+      <workItem from="1526882650522" duration="516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322350000" />
+    <option name="totallyTimeSpent" value="506097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38339022" sideWeight="0.094791666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38339022" sideWeight="0.094791666" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4372146" sideWeight="0.90520835" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7694064" sideWeight="0.90520835" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35364583" sideWeight="0.4960182" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17604166" sideWeight="0.4960182" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.275" sideWeight="0.50398177" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -836,409 +1171,399 @@
           <line>66</line>
           <properties />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/sidebarleft.jsp</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/src/main/resources/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/form.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+        <state relative-caret-position="360">
+          <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/RmsBindingInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1975">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductform.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/base/BaseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/base/BaseSearchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/StockProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrgUnitSearchParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/product/ProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/CustomerSearchParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/ProductSearchParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/OrderSearchParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/customer/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/enums/OrgUnitType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/scripts.jsp">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/static/js/dynamic_list_helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/scripts.jsp">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/StockSearchParams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/BaseQuickController.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/static/files/assets/pages/edit-table/editable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#1023#1024#0" expanded="false" />
-            <element signature="e#1088#1089#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
-          <folding>
-            <element signature="e#4557#4558#0" expanded="false" />
-            <element signature="e#4594#4595#0" expanded="false" />
-            <element signature="e#4727#4728#0" expanded="false" />
-            <element signature="e#4762#4763#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tile-defs/tiles-defs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="109" column="38" lean-forward="false" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="38" />
+        <state relative-caret-position="50">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/product/StockProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="153" column="16" lean-forward="true" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="32" />
-          <folding>
-            <element signature="e#6363#6364#0" expanded="false" />
-            <element signature="e#6404#6405#0" expanded="false" />
-            <element signature="e#6542#6543#0" expanded="false" />
-            <element signature="e#6577#6578#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="58" column="54" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/productview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="95" column="7" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="95" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/roles/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="8" column="88" lean-forward="true" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1293">
-          <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/layout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="11" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="11" />
-          <folding>
-            <marker date="1523613508734" expanded="false" signature="159227:160763" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159430:160716" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159464:160705" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159481:159702" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159538:159684" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159719:159956" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159789:159938" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="159973:160182" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="160021:160164" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="160199:160420" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="160256:160402" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="160437:160691" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="160529:160673" ph="..." />
-            <marker date="1523613508734" expanded="true" signature="160778:160789" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/classes/views.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="308" column="16" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/static/js/rms-system.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1675">
-          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/static/files/assets/pages/advance-elements/css/bootstrap-datetimepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/static/files/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/form.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.8.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="406" column="7" lean-forward="true" selection-start-line="406" selection-start-column="7" selection-end-line="406" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="46" column="75" lean-forward="false" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/base/BaseQuickServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="65">
+          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/customer/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="92" column="25" lean-forward="true" selection-start-line="68" selection-start-column="8" selection-end-line="92" selection-end-column="25" />
+        <state relative-caret-position="528">
+          <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/productview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="63" lean-forward="true" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/admin/User.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/customer/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="68" column="11" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+        <state relative-caret-position="168">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/admin/JobTitle.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/customer/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="866">
+          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/Stock.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/admin/Branch.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="37" column="100" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="37" selection-end-column="100" />
+        <state relative-caret-position="25">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/user/scripts.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        <state relative-caret-position="50">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/StockSearchParams.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/css.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="200">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/baseclasses/BaseQuickService.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customscript.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="77" lean-forward="false" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/scripts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/css.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/customer/view.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="231" column="5" lean-forward="true" selection-start-line="210" selection-start-column="4" selection-end-line="231" selection-end-column="5" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/search/UserSearchParams.java">
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="26" column="45" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="26" selection-end-column="45" />
+        <state relative-caret-position="100">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="222" column="54" lean-forward="false" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/admin/OrgUnitServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/sidebarleft.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3425">
-          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+        <state relative-caret-position="3200">
+          <caret line="128" column="6" lean-forward="false" selection-start-line="128" selection-start-column="6" selection-end-line="135" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="177" column="36" lean-forward="false" selection-start-line="177" selection-start-column="36" selection-end-line="177" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/tile-defs/tiles-defs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/classes/views.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="309" column="38" lean-forward="false" selection-start-line="309" selection-start-column="38" selection-end-line="309" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.7.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/resources/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="36" column="64" lean-forward="false" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/OrgUnitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/product/productform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/settings/UserController.java">
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/view.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="47" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/jobtitles/form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/resources/database/postgresql/liquibase/db.changelog-1.8.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11050">
+          <caret line="442" column="52" lean-forward="false" selection-start-line="442" selection-start-column="52" selection-end-line="442" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+        <state relative-caret-position="450">
+          <caret line="49" column="78" lean-forward="false" selection-start-line="49" selection-start-column="78" selection-end-line="49" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/org/smartsupply/api/service/impl/order/OrderItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1850">
+          <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/settings/orgUnits/form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="method#Order#2;class#Order#0" expanded="false" />
+            <element signature="method#Order#3;class#Order#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/RolePropertyEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/ProductPropertyEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrderPropertyEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/RmsBindingInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="110" column="75" lean-forward="false" selection-start-line="110" selection-start-column="75" selection-end-line="110" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/order/OrderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/propertyeditors/OrderItemPropertyEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/main/java/org/smartsupply/model/product/StockProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/scripts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3475">
+          <caret line="139" column="78" lean-forward="false" selection-start-line="139" selection-start-column="78" selection-end-line="139" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/org/smartsupply/web/controllers/order/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+          <folding>
+            <element signature="method#prepareModel#0;class#OrderController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/webapp/WEB-INF/views/tiles/order/orderForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1326,6 +1651,17 @@
             <option name="proportions">
               <list>
                 <option value="0.6666667" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32833335" />
               </list>
             </option>
           </splitter-proportions>

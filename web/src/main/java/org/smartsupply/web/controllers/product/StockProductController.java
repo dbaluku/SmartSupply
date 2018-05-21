@@ -40,18 +40,20 @@ public class StockProductController extends BaseQuickController<BaseQuickService
     BaseQuickService<Product,ProductSearchParams> productService;
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "view/{stock_id}")
-    public ModelAndView view(@PathVariable("stock_id") String stock_id, ModelMap modelMap) {
-        Stock stock = stockService.getById(stock_id);
+    @RequestMapping(method = RequestMethod.GET, value = "view")
+    public ModelAndView view( ModelMap modelMap) {
+        try {
+            User user = RmsSecurityUtil.getLoggedInUser();
+        Stock stock = user.getBranch().getStock();
         StockProductSearchParams params = new StockProductSearchParams(stock);
        List<StockProduct>stockProducts =new ArrayList<>();
-        try {
-            stockProducts =getService().get(params);
+       stockProducts =getService().get(params);
+//           stockProducts = user.getBranch().getStock().getProducts();
+            modelMap.put("myproducts",stockProducts);
+            modelMap.put("branch",user.getBranch());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        modelMap.put(listKey(),stockProducts);
-
         return new ModelAndView(viewName(),modelMap);
     }
 
@@ -85,9 +87,10 @@ public class StockProductController extends BaseQuickController<BaseQuickService
 //                existing.setDateCreated(new Date());
             }
            User user= RmsSecurityUtil.getLoggedInUser();
+            Stock stock =user.getBranch().getStock();
             String product_id =request.getParameter("product");
             Product product=productService.getById(product_id);
-            Stock stock= stockService.getById("ff808081626bed4201626bef32a00000");
+//            Stock stock= stockService.getById("ff808081626bed4201626bef32a00000");
             if(stock!=null){
             //StockProduct existing = new StockProduct(quantity_value,stock,product);
             existing.setStock(stock);

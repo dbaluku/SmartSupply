@@ -1,6 +1,6 @@
   'use strict';
  $(document).ready(function() {  
-$('#example-1').Tabledit({
+$('#order_table').Tabledit({
 
     editButton: false,
     deleteButton: false,
@@ -24,18 +24,19 @@ $('#example-1').Tabledit({
 });
 function add_row()
 {
-    var table = document.getElementById("example-1");
+    var table = document.getElementById("order_table");
     var t1=(table.rows.length);
     var row = table.insertRow(t1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
      var cell3 = row.insertCell(2);
+     var cell4=row.insertCell(3);
 
 cell1.className='abc';
 cell2.className='abc';
 
-   $('<span class="tabledit-span" >Click Me To Edit</span><input class="tabledit-input form-control input-sm" type="text" name="First" value="undefined" disabled="">').appendTo(cell1);
-     $('<span class="tabledit-span" >Click Me To Edit</span><input class="tabledit-input form-control input-sm" type="text" name="Last" value="undefined"  disabled="">').appendTo(cell2);
+   $('<input class="tabledit-input form-control input-sm" type="text" name="First" value="undefined" disabled="">').appendTo(cell1);
+     $('</span><input class="tabledit-input form-control input-sm" type="text" name="Last" value="undefined"  disabled="">').appendTo(cell2);
      $('<span class="tabledit-span" >@mdo</span><select class="tabledit-input form-control input-sm" name="Nickname"  disabled="" ><option value="1">@mdo</option><option value="2">@fat</option><option value="3">@twitter</option></select>').appendTo(cell3);
 
 };

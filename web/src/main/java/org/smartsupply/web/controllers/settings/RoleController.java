@@ -25,6 +25,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static org.smartsupply.web.WebUtils.addSystemMessage;
+import static org.smartsupply.web.WebUtils.logExceptionAndAddErrorMessage;
+
 @Controller
 @RequestMapping(MenuConstants.ROLES_PAGE)
 public class RoleController extends BaseController<BaseService<Role>, Role> {
@@ -39,75 +42,35 @@ public class RoleController extends BaseController<BaseService<Role>, Role> {
     @Secured(PermissionConstants.MANAGE_ROLES)
     @RequestMapping(method = RequestMethod.GET, value = "add")
     public ModelAndView add(ModelMap modelMap) {
-        return add(null, modelMap);
-    }
-
-    @Secured(PermissionConstants.MANAGE_ROLES)
-    @RequestMapping(method = RequestMethod.GET, value = "addcourseintakes/{courseId}")
-    public ModelAndView add(@PathVariable("courseId") String courseId, ModelMap modelMap) {
-        //prepareRoleFormModel(modelMap, null, courseId);
+        prepareRoleFormModel(modelMap,new Role());
         addContentHeader(modelMap);
         return new ModelAndView(ViewNameConstants.ROLE_FORM, modelMap);
     }
 
-//    private void prepareRoleFormModel(ModelMap modelMap, Role role, String courseId) {
-//
-//        try {
-//            Course course = new Course();
-//            List<CourseIntake> courseCourseIntakes = new ArrayList<>();
-//
-//            if (!StringUtils.isBlank(courseId)) {
-//                course = courseService.getById(courseId);
-//                courseCourseIntakes = courseIntakeService.get(new CourseIntakeSearchParams(course));
-//            }
-//
-//            role = role == null ? new Role(course) : role;
-//            courseCourseIntakes = getCourseCourseIntakes(role, courseCourseIntakes);
-//
-//            modelMap.put("courseIntakes", courseCourseIntakes);
-//            modelMap.put("permissions", permissionService.all());
-//            modelMap.put("courses", courseService.get(new CourseSearchParams(true, false)));
-//
-//            modelMap.put(WebConstants.OBJECT_KEY, role);
-//            addMenuActivators(modelMap);
-//        } catch (Exception e) {
-//            WebUtils.logExceptionAndAddErrorMessage(modelMap, e);
-//        }
-//    }
 
-//    private List<CourseIntake> getCourseCourseIntakes(Role role, List<CourseIntake> courseCourseIntakes) {
-//        if (role != null && null != role.getCourseIntakes()) {
-//            if (courseCourseIntakes != null) {
-//                for (CourseIntake courseIntake : role.getCourseIntakes())
-//                    if (!courseCourseIntakes.contains(courseIntake))
-//                        courseCourseIntakes.add(courseIntake);
-//            } else
-//                courseCourseIntakes = (List<CourseIntake>) role.getCourseIntakes();
-//        }
-//        Collections.sort(courseCourseIntakes);
-//        return courseCourseIntakes;
-//    }
+    private void prepareRoleFormModel(ModelMap modelMap,Role role) {
 
-    @Secured(PermissionConstants.MANAGE_ROLES)
-    @RequestMapping(value = "addcourseintakes/{roleId}/{courseId}", method = RequestMethod.GET)
-    public ModelAndView add( @PathVariable("roleId") String roleId, @PathVariable("courseId") String courseId, ModelMap modelMap) {
-
-        Role role = roleService.getById(roleId);
         try {
-            WebUtils.checkAndThrowIdNotFoundException("Role", role);
-          //  prepareRoleFormModel(modelMap, role, courseId);
-            editContentHeader(modelMap);
-            return new ModelAndView(ViewNameConstants.ROLE_FORM, modelMap);
+            modelMap.put("permissions", permissionService.all());
+
+            modelMap.put(WebConstants.OBJECT_KEY, role);
+            addMenuActivators(modelMap);
         } catch (Exception e) {
-            WebUtils.logExceptionAndAddLongResponseMessage(modelMap, e);
+            logExceptionAndAddErrorMessage(modelMap, e);
         }
-        return view(modelMap);
     }
+
+
+
+
 
     @Secured(PermissionConstants.MANAGE_ROLES)
     @RequestMapping(value = "edit/{roleId}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable("roleId") String roleId, ModelMap modelMap) {
-        return add(roleId, null, modelMap);
+       Role role =roleService.getById(roleId);
+        prepareRoleFormModel(modelMap,role);
+        addContentHeader(modelMap);
+        return new ModelAndView(ViewNameConstants.ROLE_FORM, modelMap);
     }
 
     @Secured({PermissionConstants.MANAGE_ROLES})
@@ -124,14 +87,14 @@ public class RoleController extends BaseController<BaseService<Role>, Role> {
 
             getService().validate(existing);
             getService().save(existing);
-            WebUtils.addSystemMessage(modelMap, singularName() + " Saved Successfully");
+            addSystemMessage(modelMap, singularName() + " Saved Successfully");
 
             if (role.addAnother())
                 return add(modelMap);
         } catch (Exception e) {
-            WebUtils.logExceptionAndAddErrorMessage(modelMap, e);
+            logExceptionAndAddErrorMessage(modelMap, e);
             WebUtils.addContentHeader(modelMap, "Add/Edit " + singularName());
-            //prepareRoleFormModel(modelMap, role, (role.getCourse()!=null? role.getCourse().getId():null));
+            prepareRoleFormModel(modelMap, role);
             return new ModelAndView(formName(), modelMap);
         }
         return view(1, modelMap);

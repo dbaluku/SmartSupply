@@ -107,19 +107,19 @@ implements BaseQuickService<StockProduct, StockProductSearchParams>{
         }
         ConnectionService.close(conn, s, rs);
 
-        List<Product> products = productService.get(new ProductSearchParams(productIds));
+        List<Product> products = productService.get(new ProductSearchParams(productIds,true));
         for (StockProduct t : stocks) {
             if (products.contains(t.getProduct())) {
                 t.setProduct(BaseServiceClass.get(t.getProduct(), products));
             }
         }
 
-        List<Stock> stocks1 = stockService.get(new StockSearchParams(stockIds));
-        for (StockProduct t : stocks) {
-            if (stocks1.contains(t.getStock())) {
-                t.setStock(BaseServiceClass.get(t.getStock(), stocks1));
-            }
-        }
+//        List<Stock> stocks1 = stockService.get(new StockSearchParams(stockIds,true));
+//        for (StockProduct t : stocks) {
+//            if (stocks1.contains(t.getStock())) {
+//                t.setStock(BaseServiceClass.get(t.getStock(), stocks1));
+//            }
+//        }
         return stocks;
     }
 

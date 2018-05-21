@@ -3,12 +3,14 @@
 <tiles-definitions>
 	<definition name="layout" template="/WEB-INF/views/layout.jsp">
 		<put-attribute name="title" type="string" value="SMART Supply System" />
+		<put-attribute name="cssscript" type="template" value="WEB-INF/views/tiles/css.jsp"/>
 		<put-attribute name="scripts" type="template" value="/WEB-INF/views/tiles/settings/user/scripts.jsp"/>
 		<!--<put-attribute name="pageTitle" type="template" value="/WEB-INF/views/contentHeader.jsp"/>-->
 		<!--<put-attribute name="header" type="template" value="/WEB-INF/views/tiles/header.jsp" />-->
 		<!--<put-attribute name="sidebarleft" type="template" value="/WEB-INF/views/tiles/coursetreeview.jsp" />-->
 		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/body.jsp" />
-		<!--<put-attribute name="footer" type="template" value="/WEB-INF/views/tiles/footer.jsp" />-->
+		<put-attribute name="footer-js" type="template" value="/WEB-INF/views/tiles/footer.jsp" />
+		<put-attribute name="custom-js" type="template" value="/WEB-INF/views/tiles/customscript.jsp" />
 	</definition>
 
 	<definition name="index" extends="layout" />
@@ -109,6 +111,27 @@
 
 	<definition name="viewStockProduct" extends="layout">
 		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/product/stockproduct/stockproductview.jsp" />
+	</definition>
+
+	<!--order view defs-->
+	<definition name="vieworders" extends="layout" >
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/order/orderView.jsp"/>
+	</definition>
+
+	<definition name="orderForm" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/order/orderForm.jsp"/>
+		<put-attribute name="scripts" type="template" value="/WEB-INF/views/tiles/order/scripts.jsp"/>
+	</definition>
+
+	<!--customer defs-->
+	<definition name="addcustomerform" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/customer/form.jsp"/>
+	</definition>
+
+	<definition name="viewCustomers" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/customer/view.jsp"/>
+		<put-attribute name="scripts" type="template" value="/WEB-INF/views/tiles/customer/scripts.jsp"/>
+		<put-attribute name="cssscript" type="template" value="/WEB-INF/views/tiles/customer/css.jsp"/>
 	</definition>
 </tiles-definitions>
 

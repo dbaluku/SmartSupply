@@ -10,7 +10,7 @@
 <%--<link rel="stylesheet" type="text/css" href="${baseUrl}/static/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">--%>
 
 
-<script src="${baseUrl }/static/files/bower_components/jquery/js/jquery.min.js"></script>
+<%--<script src="${baseUrl }/static/files/bower_components/jquery/js/jquery.min.js"></script>--%>
 <script src="${baseUrl}/static/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="${baseUrl}/static/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
 <script src="${baseUrl}/static/files/assets/pages/data-table/js/jszip.min.js"></script>

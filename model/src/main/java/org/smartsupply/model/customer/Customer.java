@@ -51,7 +51,7 @@ public class Customer extends BaseData implements Serializable {
         this.name = name;
     }
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = true)
     public String getEmail() {
         return email;
     }
@@ -59,7 +59,7 @@ public class Customer extends BaseData implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    @Column(name = "phoneNo", nullable = false)
+    @Column(name = "phoneno", nullable = true)
     public String getPhoneNo() {
         return phoneNo;
     }
@@ -68,7 +68,7 @@ public class Customer extends BaseData implements Serializable {
         this.phoneNo = phoneNo;
     }
 
-    @Column(name = "Adress", nullable = false)
+    @Column(name = "adress", nullable = true)
     public String getAddress() {
         return Address;
     }
@@ -77,7 +77,7 @@ public class Customer extends BaseData implements Serializable {
         Address = address;
     }
 
-    @Column(name = "customer_no", nullable = false)
+    @Column(name = "customer_no", nullable = true)
     public String getCustomerNo() {
         return CustomerNo;
     }

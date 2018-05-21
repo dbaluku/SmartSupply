@@ -20,8 +20,7 @@
     <link rel="stylesheet" type="text/css" href="${baseUrl}/static/files/assets/pages/data-table/css/buttons.dataTables.min.css">
     <%--<link rel="stylesheet" type="text/css" href="${baseUrl}/static/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">--%>
 
-
-    <script src="${baseUrl }/static/files/bower_components/jquery/js/jquery.min.js"></script>
+    <%--<script src="${baseUrl }/static/files/bower_components/jquery/js/jquery.min.js"></script>--%>
     <script src="${baseUrl}/static/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="${baseUrl}/static/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
     <script src="${baseUrl}/static/files/assets/pages/data-table/js/jszip.min.js"></script>
@@ -32,6 +31,7 @@
     <script src="${baseUrl}/static/files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="${baseUrl}/static/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <%--<script src="${baseUrl}/static/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>--%>
+
 </head>
 <body>
 <script>
@@ -53,6 +53,9 @@
                     <a href="${baseUrl}/stockproducts/add">Add</a>
                     <div style="clear: both;"></div>
                 </div>
+                <div>
+                    <h3>Stock Levels For ${branch.name}</h3>
+                </div>
             </div>
             <div class="card-block">
                 <div class="dt-responsive table-responsive">
@@ -69,7 +72,7 @@
                             <c:forEach var="item" items="${myproducts }">
                                 <tr>
                                     <td>${item.product.name}</td>
-                                    <td>${item.quantity}+" ("+${item.product.quantityType.name} +")"</td>
+                                    <td>${item.quantity} <span></span> <small>${item.product.quantityType.name}</small> </td>
                                 </tr>
                             </c:forEach>
                             </tbody>
@@ -86,6 +89,8 @@
 
     </div>
 </div>
+
+
 </body>
 </html>
 

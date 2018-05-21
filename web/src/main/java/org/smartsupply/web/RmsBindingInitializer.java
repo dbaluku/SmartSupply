@@ -2,6 +2,8 @@ package org.smartsupply.web;
 
 import org.smartsupply.model.admin.*;
 import org.smartsupply.model.admin.Branch;
+import org.smartsupply.model.order.Order;
+import org.smartsupply.model.order.OrderItem;
 import org.smartsupply.model.product.Product;
 import org.smartsupply.model.product.Stock;
 import org.smartsupply.model.product.StockProduct;
@@ -54,6 +56,12 @@ public class RmsBindingInitializer implements WebBindingInitializer {
     @Autowired
     private StockPropertyEditor stockPropertyEditor;
 
+    @Autowired
+    private OrderPropertyEditor orderPropertyEditor;
+
+    @Autowired
+    private OrderItemPropertyEditor orderItemPropertyEditor;
+
 
 
     /*
@@ -88,6 +96,14 @@ public class RmsBindingInitializer implements WebBindingInitializer {
         binder.registerCustomEditor(StockProduct.class,stockProductPropertyEditor);
         binder.registerCustomEditor(StockProduct.class,productPropertyEditor);
         binder.registerCustomEditor(Product.class,stockProductPropertyEditor);
+        binder.registerCustomEditor(Stock.class,stockProductPropertyEditor);
+        binder.registerCustomEditor(Order.class,productPropertyEditor);
+        binder.registerCustomEditor(Product.class,orderPropertyEditor);
+        binder.registerCustomEditor(Product.class,orderItemPropertyEditor);
+        binder.registerCustomEditor(OrderItem.class,orderPropertyEditor);
+        binder.registerCustomEditor(OrderItem.class,productPropertyEditor);
+        binder.registerCustomEditor(OrderItem.class,stockProductPropertyEditor);
+
 
 
 

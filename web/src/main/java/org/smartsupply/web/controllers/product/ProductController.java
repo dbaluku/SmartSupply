@@ -83,21 +83,17 @@ public class ProductController extends BaseQuickController<BaseQuickService<Prod
         return super.edit(id, modelMap);
     }
 
-    @Secured({PermissionConstants.ADD_USER})
+    //@Secured({PermissionConstants.ADD_USER})
     @RequestMapping(value = "add", method = GET)
     public ModelAndView add(ModelMap modelMap) {
 
-        try {
             Product product = new Product();
             modelMap.put("product", product);
             WebUtils.addContentHeader(modelMap, "Add " + singularName());
             modelMap.put("productTypes", ProductType.values2());
             modelMap.put("quantityTypes", QuantityType.values2());
             return new ModelAndView(formName(), modelMap);
-        } catch (Exception e) {
-            WebUtils.logExceptionAndAddErrorMessage(modelMap, e);
-            return view(modelMap);
-        }
+
     }
 
 

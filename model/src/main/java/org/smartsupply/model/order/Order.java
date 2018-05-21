@@ -5,6 +5,7 @@ import org.smartsupply.model.admin.Branch;
 import org.smartsupply.model.admin.User;
 import org.smartsupply.model.customer.Customer;
 import org.smartsupply.model.product.Product;
+import org.smartsupply.model.product.StockProduct;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,7 +18,7 @@ public class Order extends BaseData implements Serializable {
     private static final long serialVersionUID = -2636551734031385042L;
 
     private Customer customer;
-    private List<Product> products;
+    private List<OrderItem> products;
     private Date date_of_ordering;
     private double total_amount;
     private Branch branch;
@@ -30,24 +31,24 @@ public class Order extends BaseData implements Serializable {
         super(id);
     }
 
-    public Order(List<Product> products, Date date_of_ordering, double total_amount, Branch branch, User sales_man) {
-        this.products = products;
-        this.date_of_ordering = date_of_ordering;
-        this.total_amount = total_amount;
-        this.branch = branch;
-        this.sales_man = sales_man;
-    }
-
-    public Order(Customer customer, List<Product> products, Date date_of_ordering, double total_amount, Branch branch, User sales_man) {
+    public Order(Customer customer, Date date_of_ordering, double total_amount, Branch branch, User sales_man) {
         this.customer = customer;
-        this.products = products;
         this.date_of_ordering = date_of_ordering;
         this.total_amount = total_amount;
         this.branch = branch;
         this.sales_man = sales_man;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    public Order(String id, Customer customer, Date date_of_ordering, double total_amount, Branch branch, User sales_man) {
+        super(id);
+        this.customer = customer;
+        this.date_of_ordering = date_of_ordering;
+        this.total_amount = total_amount;
+        this.branch = branch;
+        this.sales_man = sales_man;
+    }
+
+    @ManyToOne()
     @JoinColumn(name = "customer_id", nullable = true)
     public Customer getCustomer() {
         return customer;
@@ -57,14 +58,12 @@ public class Order extends BaseData implements Serializable {
         this.customer = customer;
     }
 
-    @ManyToMany
-    @JoinTable(name = "order_products", joinColumns = @JoinColumn(name = "order_id"),
-            inverseJoinColumns = @JoinColumn(name = "product_id"))
-    public List<Product> getProducts() {
+    @Transient
+    public List<OrderItem> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<OrderItem> products) {
         this.products = products;
     }
 
@@ -86,7 +85,7 @@ public class Order extends BaseData implements Serializable {
         this.total_amount = total_amount;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.MERGE})
     @JoinColumn(name = "branch_id", nullable = false)
     public Branch getBranch() {
         return branch;
@@ -96,7 +95,7 @@ public class Order extends BaseData implements Serializable {
         this.branch = branch;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne()
     @JoinColumn(name = "user_id", nullable = false)
     public User getSales_man() {
         return sales_man;

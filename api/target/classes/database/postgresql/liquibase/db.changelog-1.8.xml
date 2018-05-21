@@ -400,6 +400,59 @@
 		<addForeignKeyConstraint baseColumnNames="branch_id" baseTableName="orders" constraintName="FK_9aol79jnu4o47e5ky2jgk0kch" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="org_unit"/>
 	</changeSet>
 
+	<changeSet  author="dbaluku" id="124356">
+		<dropColumn tableName="customer" columnName="Adress" />
+	</changeSet>
+
+	<changeSet author="dbaluku" id="124357">
+		<addColumn tableName="customer">
+			<column name="adress" type="VARCHAR(255)">
+				<constraints nullable="true"/>
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<changeSet  author="dbaluku" id="124358">
+		<dropColumn tableName="customer" columnName="phoneNo"/>
+	</changeSet>
+
+	<changeSet id="124359" author="dbaluku">
+		<addColumn tableName="customer">
+			<column name="phoneno" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<changeSet  author="dbaluku" id="124360">
+		<dropNotNullConstraint tableName="customer" columnName="phoneno"/>
+		<dropNotNullConstraint tableName="customer" columnName="email"/>
+		<dropNotNullConstraint tableName="customer" columnName="customer_no"/>
+	</changeSet>
+
+	<changeSet id="add_quantity_column" author="dbaluku">
+		<addColumn tableName="order_products">
+			<column name="quantity" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<changeSet id="add_record_status" author="dbaluku">
+		<addColumn tableName="order_products">
+			<column name="record_status" type="INT">
+				<constraints nullable="false"/>
+			</column>
+		</addColumn>
+	</changeSet>
+
+	<changeSet id="add_id" author="dbaluku">
+		<addColumn tableName="order_products">
+			<column name="id" type="VARCHAR(255)">
+				<constraints nullable="false"/>
+			</column>
+		</addColumn>
+	</changeSet>
 
 </databaseChangeLog>
 

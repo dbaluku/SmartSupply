@@ -11,6 +11,7 @@ import org.smartsupply.api.utils.BuildWhereClauseUtil;
 import org.smartsupply.model.customer.Customer;
 import org.smartsupply.model.search.CustomerSearchParams;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.smartsupply.api.utils.MyValidate.disallowNull;
-
+@Service("customerService")
 public class CustomerServiceImpl extends BaseQuickServiceImpl<Customer, CustomerSearchParams>
         implements BaseQuickService<Customer, CustomerSearchParams> {
 
@@ -51,10 +52,10 @@ public class CustomerServiceImpl extends BaseQuickServiceImpl<Customer, Customer
 
     @Override
     public String buildQuery(CustomerSearchParams params, Integer pageNo) {
-        String sql = "select id, customer_name, email, phoneNo, Adress, customer_no from customer";
+        String sql = "select id, customer_name, email, phoneno, adress, customer_no from customer";
 
         StringBuilder whereClause = new StringBuilder();
-        BuildWhereClauseUtil.addEqual(whereClause, "phoneNo", params.getPhoneNo());
+        BuildWhereClauseUtil.addEqual(whereClause, "phoneno", params.getPhoneNo());
         if (StringUtils.isNotBlank(whereClause.toString())) {
             sql += " where " + whereClause.toString();
         }
@@ -80,8 +81,8 @@ public class CustomerServiceImpl extends BaseQuickServiceImpl<Customer, Customer
             String id = rs.getString("id");
             String name= rs.getString("customer_name");
             String email= rs.getString("email");
-            String phoneNo= rs.getString("phoneNo");
-            String Adress= rs.getString("Adress");
+            String phoneNo= rs.getString("phoneno");
+            String Adress= rs.getString("adress");
             String customer_no= rs.getString("customer_no");
 
             Customer customer =new Customer(id,name,email,phoneNo,Adress,customer_no);
