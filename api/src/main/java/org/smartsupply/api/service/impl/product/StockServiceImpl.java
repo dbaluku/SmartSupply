@@ -13,6 +13,7 @@ import org.smartsupply.api.utils.BuildWhereClauseUtil;
 import org.smartsupply.model.product.Product;
 import org.smartsupply.model.product.Stock;
 import org.smartsupply.model.product.StockProduct;
+import org.smartsupply.model.search.OrgUnitSearchParams;
 import org.smartsupply.model.search.ProductSearchParams;
 import org.smartsupply.model.search.StockProductSearchParams;
 import org.smartsupply.model.search.StockSearchParams;
@@ -54,6 +55,8 @@ public class StockServiceImpl extends BaseQuickServiceImpl<Stock, StockSearchPar
 //        disallowNull(product.getQuantityType(), "Quantity Type");
 //        disallowNull(product.getUnitprice(), "Unit Price");
     }
+
+
 
     public void deleteById(String id) throws Exception {
         Stock stock = getById(id);

@@ -1,5 +1,7 @@
 package org.smartsupply.web.controllers.order;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.smartsupply.api.security.PermissionConstants;
 import org.smartsupply.api.security.util.RmsSecurityUtil;
 import org.smartsupply.api.service.baseclasses.BaseQuickService;
@@ -23,7 +25,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -54,36 +58,51 @@ public class OrderController extends BaseQuickController<BaseQuickService<Order,
     @Autowired
     private BaseQuickService<StockProduct,StockProductSearchParams> stockProductService;
 
-
+    protected Logger log = LoggerFactory.getLogger(this.getClass());
     @RequestMapping(method = RequestMethod.POST, value = "saveorder")
-//    public  ModelAndView saveorderitems (@ModelAttribute("orderList") List<OrderForm> orderFormList,
-//                                         ModelMap modelMap){
-//        return view(modelMap);
-//    }
-    public ModelAndView save(@ModelAttribute("newOrder") Order order, ModelMap modelMap) {
-
+    public ModelAndView save(@ModelAttribute("newOrder") Order order, HttpServletRequest request, ModelMap modelMap) {
+        String quantities = request.getParameter("quantities");
+        List<Double> quantities_values = splitQuantities(quantities);
         List<OrderItem>items = new ArrayList<>();
         order.setDate_of_ordering(new Date());
         try {
+
             User user = RmsSecurityUtil.getLoggedInUser();
             order.setSales_man(user);
+            Stock stock = user.getBranch().getStock();
+            log.error(stock.getName());
             order.setBranch(user.getBranch());
-            getService().save(order);
             items =order.getProducts();
+            if(items.size()!=quantities_values.size()){
+                WebUtils.addErrorMessage(modelMap, "Mismatching values for products");
+            }
+            else {
+                getService().save(order);
 
-            //Product product =productService.getById("402888e463014eb90163014f5bd90000");
-            if(items!=null &&items.size()>0) {
-                for(int x=0;x<items.size();x++) {
-                    OrderItem t = items.get(x);
-                    if(t!=null){
-                    Product product = productService.getById(t.getProduct().getId());
-                    Double qnty = t.getQuantity();
-                    OrderItem orderItem = new OrderItem(product, order, qnty);
-                    orderitemService.save(orderItem);}
+
+                //Product product =productService.getById("402888e463014eb90163014f5bd90000");
+                if (items != null && items.size() > 0) {
+                    for (int x = 0; x < items.size(); x++) {
+                        OrderItem t = items.get(x);
+                        if (t != null) {
+                            Product product = productService.getById(t.getProduct().getId());
+                            Double qnty = t.getQuantity();
+                            StockProduct stockProduct = null;
+                            stockProduct =stockProductService.getUnique(
+                                    new StockProductSearchParams(stock,product));
+                            Double new_quantity =update_product_quantity(stockProduct.getQuantity(),t.getQuantity());
+                            stockProduct.setQuantity(new_quantity);
+                            stockProduct.setStock(stock);
+                            stockProductService.save(stockProduct);
+
+                            log.error(String.valueOf(stockProduct.getQuantity()));
+                            log.error(stockProduct.getStock().getId());
+                            OrderItem orderItem = new OrderItem(product, order, qnty);
+                            orderitemService.save(orderItem);
+                        }
+                    }
                 }
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -139,7 +158,7 @@ public class OrderController extends BaseQuickController<BaseQuickService<Order,
         try {
             User user =RmsSecurityUtil.getLoggedInUser();
             List<StockProduct> stockProducts= new ArrayList<>();
-            stockProducts =stockProductService.get(new StockProductSearchParams(user.getBranch().getStock()));
+            stockProducts =stockProductService.get(new StockProductSearchParams(user.getBranch().getStock(),1.0));
             Order order = new Order();
             modelMap.put("newOrder",order);
             WebUtils.addContentHeader(modelMap, "Add " + singularName());
@@ -216,5 +235,22 @@ public class OrderController extends BaseQuickController<BaseQuickService<Order,
     @Override
     protected String menuItemName() {
         return null;
+    }
+
+    public List<Double> splitQuantities(String qnty_str){
+        List<Double> int_values = new ArrayList<>();
+
+        //        splitting string
+        List<String> stringList = Arrays.asList(qnty_str.split(","));
+        for (String str:stringList) {
+            double value =0;
+            value = Double.parseDouble(str);
+            int_values.add(value);
+        }
+        return int_values;
+    }
+
+    public Double update_product_quantity(double stock_quantity, double sold_quantity){
+        return stock_quantity-sold_quantity;
     }
 }

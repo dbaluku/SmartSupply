@@ -14,6 +14,7 @@ import org.smartsupply.model.order.Order;
 import org.smartsupply.model.order.OrderItem;
 import org.smartsupply.model.product.Product;
 import org.smartsupply.model.search.OrderItemSearchParams;
+import org.smartsupply.model.search.OrgUnitSearchParams;
 import org.smartsupply.model.search.ProductSearchParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -112,6 +113,7 @@ public class OrderItemServiceImpl extends BaseQuickServiceImpl<OrderItem, OrderI
         // more work is needed here
         return items;
     }
+
 
 }
 

@@ -15,6 +15,7 @@ import org.smartsupply.model.enums.QuantityType;
 import org.smartsupply.model.product.Category;
 import org.smartsupply.model.product.Product;
 import org.smartsupply.model.search.CategorySearchParams;
+import org.smartsupply.model.search.OrgUnitSearchParams;
 import org.smartsupply.model.search.ProductSearchParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,6 +55,7 @@ implements BaseQuickService<Product, ProductSearchParams> {
         disallowNull(product.getQuantityType(), "Quantity Type");
         disallowNull(product.getUnitprice(), "Unit Price");
     }
+
 
     public void deleteById(String id) throws Exception {
         Product product = getById(id);

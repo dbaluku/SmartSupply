@@ -4,10 +4,13 @@ import org.smartsupply.model.admin.Branch;
 import org.smartsupply.model.admin.User;
 import org.smartsupply.model.customer.Customer;
 
+import java.util.Date;
+
 public class OrderSearchParams extends BaseSearchParams {
     private Customer customer;
     private Branch branch;
     private User user;
+    private Date date;
 
     public OrderSearchParams() {
     }

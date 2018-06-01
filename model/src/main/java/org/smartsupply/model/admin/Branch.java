@@ -20,7 +20,7 @@ public class Branch extends BaseData implements Comparable<Branch> {
 
     private static final long serialVersionUID = -2636551734031785042L;
 
-    private String name, abbreviation;
+    public String name, abbreviation;
     private OrgUnitType type;
     private User head, asstHead, agHead;
     private JobTitle headTitle, asstHeadTitle, agHeadTitle;

@@ -11,6 +11,7 @@ import org.smartsupply.api.service.impl.base.BaseQuickServiceImpl;
 import org.smartsupply.api.utils.BuildWhereClauseUtil;
 import org.smartsupply.model.product.Category;
 import org.smartsupply.model.search.CategorySearchParams;
+import org.smartsupply.model.search.OrgUnitSearchParams;
 import org.smartsupply.model.search.ProductSearchParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,7 @@ implements BaseQuickService<Category, CategorySearchParams> {
 //        disallowNull(product.getQuantityType(), "Quantity Type");
 //        disallowNull(product.getUnitprice(), "Unit Price");
     }
+
 
     public void deleteById(String id) throws Exception {
         Category category = getById(id);

@@ -20,15 +20,15 @@
                         <h5>Add StockProduct Form</h5>
                     </div>
                     <div class="card-block">
-                        <form:form action="${baseUrl }/stockproducts/saveproduct" commandName="objectKey" method="POST">
+                        <form:form action="${baseUrl }/stockproducts/saveproduct" commandName="objectKey" method="POST" id="stocking_form">
                             <form:input type="hidden" path="id"/>
                             <form:input type="hidden" path="stock"/>
                             <div class="row">
                                 <label class="col-sm-4 col-lg-2 col-form-label">Product</label>
                                 <div class="col-sm-8 col-lg-6">
                                     <div class="input-group">
-                                        <form:select  path="product" name="product" class="form-control">
-                                            <form:option value="none" label=""/>
+                                        <form:select  path="product" name="product" class="form-control" id="productlist">
+                                            <form:option value="" label=""/>
                                             <form:options itemValue="id" items="${productlist}" itemLabel="name"/>
                                         </form:select>
                                     </div>
@@ -38,7 +38,7 @@
                                 <label class="col-sm-4 col-lg-2 col-form-label">Quantity</label>
                                 <div class="col-sm-8 col-lg-6">
                                     <div class="input-group">
-                                        <form:input  path="quantity" class="form-control"/>                                    </div>
+                                        <form:input id="quantity" path="quantity" class="form-control numberinput"/>                                    </div>
                                 </div>
                             </div>
 
@@ -46,7 +46,7 @@
                                 <label class="col-sm-4 col-lg-6 col-form-label"></label>
                                 <div class="col-sm-2 col-lg-2">
                                     <div class="input-group">
-                                        <input  type="submit" value="Save" class="btn btn-block"/>
+                                        <input id="btnSave"  type="submit" value="Save" class="btn btn-block"/>
                                     </div>
                                 </div>
                             </div>
@@ -58,3 +58,4 @@
         </div>
     </div>
 </div>
+

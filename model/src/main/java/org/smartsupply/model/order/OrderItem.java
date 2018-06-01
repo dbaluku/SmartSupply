@@ -30,6 +30,11 @@ public class OrderItem extends BaseData implements Serializable{
         this.quantity = quantity;
     }
 
+    public Double salesperItem(OrderItem orderItem)
+    {
+        Double sales = orderItem.getProduct().getUnitprice()*orderItem.getQuantity();
+        return sales;
+    }
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "product_id")
     public Product getProduct() {

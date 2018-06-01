@@ -5,6 +5,8 @@
   Time: 12:54 PM
   To change this template use File | Settings | File Templates.
 --%>
+<script src="${baseUrl}/static/js/force_numeric.js"></script>
+
 <script type="text/javascript">
 
     $(document).ready( function() {
@@ -95,33 +97,56 @@
         jQuery(document).delegate('input.amount_calc', 'change', function(e)
         {
             //console.log($(this).val());
-            var item_qnty = $(this).val();
+            var item_qnty = parseFloat($(this).val());
             var x = $(this).attr('id');
             var stringLength = x.length;
             var indexvalue =x.charAt(stringLength - 1);
 
 //            getting product id that was selected
             var product_id = $('#id_select_' + indexvalue).val();
-            var stck_quantity = $('.stock_quantity').find('#' + product_id).val();
-            console.log(stck_quantity);
-            if(stck_quantity >= item_qnty){
-                //id of input value to set unitprice
-                var total_id = 'id_total_' + indexvalue;
-                var unit_price = $('#id_unitprice_' + indexvalue).val();
-                var item_total = unit_price * item_qnty;
-                $('#' + total_id).attr('value', item_total);
-                compute_total_amount_for_Order();
+            var stck_quantity = parseFloat($('.stock_quantity').find('#' + product_id).val());
+//            console.log(stck_quantity);
+            if(isPostiveNumber(x)) {
+
+                if (stck_quantity >= item_qnty) {
+                    //id of input value to set unitprice
+                    var total_id = 'id_total_' + indexvalue;
+                    var unit_price = $('#id_unitprice_' + indexvalue).val();
+                    var item_total = unit_price * item_qnty;
+                    $('#' + total_id).attr('value', item_total);
+                    $('#id_quantity_' + indexvalue).css('border', '0px solid');
+                    compute_total_amount_for_Order();
+                }
+
+                else {
+                    window.alert("Quantity not in stock." +
+                        "Please make sure it's" + " " + stck_quantity + ""+ "and below");
+                    $('#id_quantity_' + indexvalue).focus();
+                    $('#id_quantity_' + indexvalue).css('border', '1px solid red');
+                    $('#id_quantity_' + indexvalue).val("0");
+
+                }
             }
-
-            else {
-                window.alert("Quantity not in stock." +
-                    "Please make sure it's" +  " " +stck_quantity +"and below");
-                $('#id_quantity_'+ indexvalue).focus();
-
+            else{
+                window.alert("Quantity must be a positive number ");
+                $('#id_quantity_' + indexvalue).focus();
+                $('#id_quantity_' + indexvalue).css('border', '1px solid red');
+                $('#id_quantity_' + indexvalue).val("0");
             }
 
         });
 
+        $('#btnSave').click(function (e) {
+            e.preventDefault();
+            getting_quantitites();
+           if(does_customer_exist()){
+            $('#myform').submit();
+           }
+           else{
+
+           }
+
+        });
     });
 
     function refresh_row(some_vlaue){
@@ -144,52 +169,59 @@
 
     }
 
-//    $('#').click(function (e) {
-//        var form = $('#myform');
-//        e.preventDefault();
-//        var TableData;
-//        TableData = storeTblValues();
-//        //TableData = $.toJSON(TableData);
-//        TableData = JSON.stringify({
-//
-//            'TableData' : TableData
-//
-//        });
-//        console.log(TableData);
-//        $.ajax({
-//            headers: {
-//                'Accept': 'application/json',
-//                'Content-Type': 'application/json'
-//            },
-//            type: "POST",
-//            url: form.attr('action'),
-//            contentType:"application/json",
-//            data: JSON.stringify({
-//
-//                'TableData' : TableData
-//
-//            }),
-//            success: function(data){
-//                alert('Success');
-//
-//            },
-//            error: function (e) {
-//                alert("Error: " + e);
-//            }
-//        });
-//    });
+    function does_customer_exist(){
+       var customer_value= $('#customerid').val();
+       if(isSystemBlank(customer_value)){
+           window.alert("Please Select A Customer or Enter new one");
+           $('#customerid').focus();
+           return false;
+       }
+       else{
+           return true;
+
+       }
+    }
+
+    function isSystemBlank(str) {
+        if (str == null || str == "" || str == "none")
+            return true;
+
+        return false;
+    }
+
+    function isPostiveNumber(id) {
+        var fieldName = jQuery("#" + id).attr('name');
+        var numericExpression = /^[+]?[0-9]+(\.[0-9]+)?$/;
+        var num = $("#" + id).val();
+
+        if (!numericExpression.test(num)) {
+                alert(fieldName + " must be a number!!");
+            return false;
+        }
+        return true;
+    }
+
+    function isPositiveInteger(id) {
+        var fieldName = jQuery("#" + id).attr('name');
+        var value = $.trim($("#" + id).val());
+        var numericExpression = /^[+]?[0-9]+$/;
+        if (!numericExpression.test(value)) {
+                alert(fieldName + " must be a positive number!!");
+            return false;
+        }
+        return true;
+    }
 
 
-    function storeTblValues() {
-        var TableData = new Array();
-        $('#order_table tr').each(function (row, tr) {
-            TableData[row] = {
-                "product_id": $(tr).find('td:eq(0)').text()
-                , "quantity": $(tr).find('td:eq(1)').text()
-            }
+    function getting_quantitites(){
+        var ids =[0];
+        ids.pop();
+        jQuery('#order_table_body >tr').each(function(index) {
+            var i=index+1;
+           ids.push(parseFloat($(this).find('#id_quantity_'+ i).val()));
         });
-        TableData.shift();  // first row is the table header - so remove
-        return TableData;
+        var id_string = ids.join(',');
+        $('#quantities').attr('value',id_string);
     }
 
 

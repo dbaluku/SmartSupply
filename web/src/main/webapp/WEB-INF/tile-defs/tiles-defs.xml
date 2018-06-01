@@ -30,6 +30,7 @@
 	
     <definition name="productForm" extends="layout">
 	<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/product/productform.jsp" />
+		<put-attribute name="scripts" type="template" value="/WEB-INF/views/tiles/product/scripts.jsp"/>
     </definition>
 	<definition name="viewProducts" extends="settingsPanel">
 		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/product/productview.jsp" />
@@ -107,6 +108,7 @@
 	<!--stock products views-->
 	<definition name="stockproductform" extends="layout">
 		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/product/stockproduct/stockproductform.jsp" />
+		<put-attribute name="scripts" type="template" value="/WEB-INF/views/tiles/product/stockproduct/scripts.jsp"/>
 	</definition>
 
 	<definition name="viewStockProduct" extends="layout">
@@ -133,6 +135,34 @@
 		<put-attribute name="scripts" type="template" value="/WEB-INF/views/tiles/customer/scripts.jsp"/>
 		<put-attribute name="cssscript" type="template" value="/WEB-INF/views/tiles/customer/css.jsp"/>
 	</definition>
+
+
+	<definition name="admin" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/homepages/adminpage.jsp"/>
+	</definition>
+
+	<!--Analysis Views-->
+
+	<definition name="ordercharts" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/Analysis/orderCharts.jsp"/>
+	</definition>
+
+	<definition name="choosebranches" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/Analysis/choosebranch.jsp"/>
+	</definition>
+
+	<definition name="branchSales" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/Analysis/branchSales.jsp"/>
+	</definition>
+
+	<definition name="salesperson" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/Analysis/IndividualSales.jsp"/>
+	</definition>
+	<definition name="branchForm" extends="layout">
+		<put-attribute name="body" type="template" value="/WEB-INF/views/tiles/Analysis/branchForm.jsp"/>
+	</definition>
+
+
 </tiles-definitions>
 
 

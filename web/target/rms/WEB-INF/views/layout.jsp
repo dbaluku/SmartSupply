@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <a href="${baseUrl}/">
-                        <img class="img-fluid" src="${baseUrl}/static/files/assets/images/logo.png" alt="Theme-Logo" />
+                        <img class="img-fluid" src="${baseUrl}/static/images/logo-sm.png" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
@@ -216,7 +216,7 @@
                         </li>
                         <li class="user-profile header-notification">
                             <a href="#!" class="waves-effect waves-light">
-                                <img src="${baseUrl}/static/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                <%--<img src="${baseUrl}/static/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">--%>
                                 <span>${user.FullName}</span>
                                 <i class="ti-angle-down"></i>
                             </a>
@@ -264,7 +264,7 @@
                         <div class="main-friend-list">
                             <div class="media userlist-box waves-effect waves-light" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
                                 <a class="media-left" href="#!">
-                                    <img class="media-object img-radius img-radius" src="${baseUrl}/static/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+                                    <%--<img class="media-object img-radius img-radius" src="${baseUrl}/static/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">--%>
                                     <div class="live-status bg-success"></div>
                                 </a>
                                 <div class="media-body">
@@ -273,7 +273,7 @@
                             </div>
                             <div class="media userlist-box waves-effect waves-light" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
                                 <a class="media-left" href="#!">
-                                    <img class="media-object img-radius" src="${baseUrl}/static/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                    <%--<img class="media-object img-radius" src="${baseUrl}/static/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">--%>
                                     <div class="live-status bg-success"></div>
                                 </a>
                                 <div class="media-body">
@@ -282,7 +282,7 @@
                             </div>
                             <div class="media userlist-box waves-effect waves-light" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
                                 <a class="media-left" href="#!">
-                                    <img class="media-object img-radius" src="${baseUrl}/static/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                    <%--<img class="media-object img-radius" src="${baseUrl}/static/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">--%>
                                     <div class="live-status bg-success"></div>
                                 </a>
                                 <div class="media-body">
@@ -291,7 +291,7 @@
                             </div>
                             <div class="media userlist-box waves-effect waves-light" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
                                 <a class="media-left" href="#!">
-                                    <img class="media-object img-radius" src="${baseUrl}/static/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                    <%--<img class="media-object img-radius" src="${baseUrl}/static/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">--%>
                                     <div class="live-status bg-success"></div>
                                 </a>
                                 <div class="media-body">

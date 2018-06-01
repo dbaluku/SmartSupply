@@ -1,6 +1,7 @@
 package org.smartsupply.api.service.baseclasses;
 
 import com.googlecode.genericdao.search.Search;
+import org.smartsupply.model.search.OrgUnitSearchParams;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,4 +43,6 @@ public interface BaseService<ModelObject> {
     void deleteByIds(String[] ids) throws Exception;
 
     void validateDelete(String[] ids) throws Exception;
+
+
 }

@@ -23,13 +23,13 @@
                         <h5>Add Product Form</h5>
                     </div>
                     <div class="card-block">
-                        <form:form action="${baseUrl }/product/save" commandName="product"  enctype="multipart/form-data">
+                        <form:form action="${baseUrl }/product/save" commandName="product"  id="product_form">
 
                             <div class="row">
                                 <label class="col-sm-4 col-lg-2 col-form-label">Name</label>
                                 <div class="col-sm-8 col-lg-6">
                                     <div class="input-group">
-                                        <form:input type="text" path="name" id="txtName" class="form-control" placeholder="Name"/>
+                                        <form:input type="text" path="name" id="txtName" class="form-control" placeholder="Name" />
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                 <label class="col-sm-4 col-lg-2 col-form-label">Unit Price:</label>
                                 <div class="col-sm-8 col-lg-6">
                                     <div class="input-group">
-                                        <form:input  path="unitprice" class="form-control" />
+                                        <form:input  path="unitprice" class="form-control numberinput" id="unit_price" />
                                     </div>
                                 </div>
                             </div>

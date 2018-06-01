@@ -14,7 +14,6 @@
     <bytecodeTargetLevel>
       <module name="api" target="1.8" />
       <module name="model" target="1.8" />
-      <module name="rms-parent" target="1.8" />
       <module name="smartsupply" target="1.8" />
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>

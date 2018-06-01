@@ -65,8 +65,7 @@
                                 <th>Gender</th>
                                 <th>User Type</th>
                                 <th>Dept/Unit</th>
-                                <th>Job Titles</th>
-                            </tr>
+                                 </tr>
                             </thead>
                             <tbody>
                                 <c:forEach var="user" items="${staffUsers }">
@@ -77,9 +76,8 @@
                                         <td class="allow-wrap">${user.roleString }</td>
                                         <td>${user.gender }</td>
                                         <td>${user.userType.name }</td>
-                                        <td class="allow-wrap">${user.branch.abbreviation }</td>
-                                        <td>${user.jobTitleString }</td>
-                                        <%--<td><commonTags:editdeletebuttons name="Staff-User" url="${activeItem}" id="${user.id }"/></td>--%>
+                                        <td class="allow-wrap">${user.branch.name}</td>
+                                       <%--<td><commonTags:editdeletebuttons name="Staff-User" url="${activeItem}" id="${user.id }"/></td>--%>
 
                                     </tr>
                                 </c:forEach>

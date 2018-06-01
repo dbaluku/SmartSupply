@@ -27,6 +27,8 @@ public class UserSearchParams extends BaseSearchParams {
         this.setIds(isIdString ? ids : null);
     }
 
+    public UserSearchParams(Branch branch) { this.branch = branch; }
+
     public UserSearchParams(List<UserType> userTypes) {
         this.userTypes = userTypes;
     }

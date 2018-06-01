@@ -90,16 +90,19 @@ public class StockProductController extends BaseQuickController<BaseQuickService
             Stock stock =user.getBranch().getStock();
             String product_id =request.getParameter("product");
             Product product=productService.getById(product_id);
-//            Stock stock= stockService.getById("ff808081626bed4201626bef32a00000");
             if(stock!=null){
-            //StockProduct existing = new StockProduct(quantity_value,stock,product);
+            StockProduct stockProduct1=stockProductService.getUnique(new StockProductSearchParams(stock,product));
+            if(stockProduct1!=null){
+                Double qnty=stockProduct1.getQuantity();
+                String id = stockProduct1.getId();
+                Double new_quantity = existing.getQuantity()+qnty;
+                existing.setQuantity(new_quantity);
+                existing.setId(id);
+
+            }
+
             existing.setStock(stock);
             existing.setProduct(product);
-            //StockProduct already_existing=null;
-            // List<StockProduct>already_existing =getService().get(new StockProductSearchParams(stock,product));
-
-              // double new_quantity=  already_existing.getQuantity()+existing.getQuantity();
-              // existing.setQuantity(new_quantity);
 
 
                 getService().validate(existing);

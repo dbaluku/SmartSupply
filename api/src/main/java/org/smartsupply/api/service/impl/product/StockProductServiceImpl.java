@@ -26,6 +26,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.smartsupply.api.utils.BuildWhereClauseUtil.addAndToWhereClause;
 import static org.smartsupply.api.utils.MyValidate.disallowNull;
 
 @Service("stockProductService")
@@ -70,6 +71,9 @@ implements BaseQuickService<StockProduct, StockProductSearchParams>{
         StringBuilder whereClause = new StringBuilder();
         BuildWhereClauseUtil.addEqual(whereClause, "s.stock_id", params.getStock());
         BuildWhereClauseUtil.addEqual(whereClause, "s.product_id", params.getProduct());
+        if(params.getQuantity()!=null){
+        BuildWhereClauseUtil.addFloor(whereClause,"s.quantity",params.getQuantity());}
+
         if (StringUtils.isNotBlank(whereClause.toString())) {
             sql += " where " + whereClause.toString();
         }

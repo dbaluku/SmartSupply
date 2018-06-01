@@ -25,12 +25,13 @@
                     <div class="card-block">
                         <form:form method="post" action="${baseUrl}/order/saveorder" modelAttribute="newOrder" id="myform" >
 
+                            <input id="quantities" name="quantities" type="hidden"/>
                             <div class="row">
                                 <label class="col-sm-4 col-lg-2 col-form-label">Customer</label>
                                 <div class="col-sm-8 col-lg-6">
                                     <div class="input-group">
-                                        <form:select path="customer" class="form-control">
-                                            <form:option value="none" label=""/>
+                                        <form:select path="customer" class="form-control" id="customerid">
+                                            <form:option value="" label=""/>
                                             <form:options itemValue="id" items="${customers}" itemLabel="name"/>
                                         </form:select>
                                     </div>
@@ -68,11 +69,11 @@
                                                 </c:forEach>
                                             </select>
                                             </td>
-                                            <td><input id="id_quantity_1" class="tabledit-input form-control input-sm amount_calc"
+                                            <td><input id="id_quantity_1" class="tabledit-input form-control input-sm amount_calc numberinput"
                                                        type="text" name="products[0].quantity" value="0" />
 
                                             </td>
-                                            <td><input id="id_unitprice_1" class=" form-control input-sm price-select" type="text" name="orderitem[].product.unitPrice" disabled="disabled"/>
+                                            <td><input id="id_unitprice_1" class=" form-control input-sm price-select" type="text" name="orderitem[].product.unitPrice" readonly="true"/>
                                                 <select style='display:none;'>
                                                 <option id="0" value="0">0</option>
                                                 <c:forEach items="${products}" var="item">
@@ -80,13 +81,14 @@
                                                 </c:forEach>
                                             </select></td>
 
-                                            <td><input id="id_total_1" value="0" class=" form-control input-sm" type="text" name="item_amount" disabled="disabled"  /></td>
+                                            <td><input id="id_total_1" value="0" class=" form-control input-sm" type="text" name="item_amount" readonly="true"  /></td>
                                             <td><a class="btn btn-xs delete-record" data-id="1"><span style="color: #FF0000">Delete</span></a></td>
 
                                         </tr>
                                     </tbody>
                                 </table>
-                                <form:input id="final_amount" class="tabledit-input form-control input-sm" path="total_amount" />
+                                <form:input id="final_amount" class="tabledit-input form-control input-sm" path="total_amount"
+                                            style='font-weight: bold;color:red;font-size:18px;' readonly="true" />
                                 <%--<a href="#" id="addPerson">Add Person</a>&nbsp;&nbsp;--%>
                                 <%--<a href="?f=">Reset List</a>--%>
 
@@ -105,7 +107,7 @@
                                             </c:forEach>
                                         </select>
                                     </td>
-                                    <td><input id="id_quantity_0" class="tabledit-input form-control input-sm amount_calc"
+                                    <td><input id="id_quantity_0" class="tabledit-input form-control input-sm amount_calc numberinput"
                                                type="text" name="products[0].quantity" value="0" />
                                         <select class="stock_quantity" style='display:none;'>
                                             <option id="0" value="0">0</option>
@@ -114,7 +116,7 @@
                                             </c:forEach>
                                         </select>
                                     </td>
-                                    <td><input id="id_unitprice_0" class=" form-control input-sm price-select" type="text" name="orderitem[0].product.unitPrice" disabled="disabled"/>
+                                    <td><input id="id_unitprice_0" class=" form-control input-sm price-select" type="text" name="orderitem[0].product.unitPrice" readonly="true"/>
                                         <select style='display:none;'>
                                             <option id="0" value="0">0</option>
                                             <c:forEach items="${products}" var="item">
@@ -123,7 +125,7 @@
                                         </select></td>
 
                                     <td><input id="id_total_0" class=" form-control input-sm" type="text"
-                                               name="item_amount" disabled="disabled" value="0"  /></td>
+                                               name="item_amount" readonly="true" value="0"  /></td>
                                     <td><a class="btn btn-xs delete-record" data-id="0"><span style="color: #FF0000">Delete</span></a></td>
 
                                 </tr>
